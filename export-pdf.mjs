@@ -17,7 +17,7 @@ const TMPDIR = fs.mkdtempSync(path.join(os.tmpdir(), "pharaoh-pdf-"));
 // Slide dimensions from Reveal config
 const SLIDE_W = 1600;
 const SLIDE_H = 1000;
-const SCALE   = 1;
+const SCALE   = 2;
 
 // ── Start an ephemeral static file server rooted in __dirname ────────────────
 const MIME = {
@@ -145,7 +145,7 @@ const imgTags = pngPaths
   .map((p) => `<img src="file://${p}">`)
   .join("\n");
 
-const stitchHtml = path.join(TMPDIR, "stitch.html");
+const stitchHtml = path.join(TMPDIR, "WELL IT Autonomous AI Transformation");
 fs.writeFileSync(
   stitchHtml,
   `<!DOCTYPE html><html><head><style>
