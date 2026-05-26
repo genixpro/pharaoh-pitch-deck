@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Endpoint Agent · Pharaoh</title>
+  <link rel="stylesheet" href="pharaoh-app.css" />
+  <style>
+    .grid-2c { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .grid-3c { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+    .stat-row { display: flex; align-items: center; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line-soft); }
+    .stat-row:last-child { border-bottom: none; }
+    .stat-row .icon {
+      width: 32px; height: 32px;
+      background: rgba(125,201,255,0.08);
+      border: 1px solid var(--line-cyan);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--cyan-500);
+      flex-shrink: 0;
+    }
+    .stat-row .label { font-size: 11.5px; color: var(--text-muted); }
+    .stat-row .value { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+    .bar-wrap { height: 4px; border-radius: 2px; background: rgba(255,255,255,0.08); margin-top: 4px; }
+    .bar-fill { height: 100%; border-radius: 2px; background: var(--cyan-500); }
+    .bar-fill.warn { background: var(--amber-500); }
+    .bar-fill.ok { background: var(--green-400); }
+    .observation {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--line-soft);
+      font-size: 12px;
+    }
+    .observation:last-child { border-bottom: none; }
+    .observation .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+    .dot.green { background: var(--green-400); }
+    .dot.amber { background: var(--amber-500); }
+    .dot.cyan  { background: var(--cyan-500); }
+    .session-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--line-soft);
+      font-size: 12px;
+    }
+    .session-item:last-child { border-bottom: none; }
+    .session-item .agent-tag {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(125,201,255,0.08);
+      color: var(--cyan-400);
+      border: 1px solid var(--line-cyan);
+      white-space: nowrap;
+    }
+    .mt-2 { margin-top: 12px; }
+    .accent-green { color: var(--green-400); }
+    .accent-amber { color: var(--amber-500); }
+    .accent-cyan  { color: var(--cyan-400); }
+    .row-flex { display: flex; align-items: center; gap: 8px; }
+    .between { justify-content: space-between; }
+  </style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <svg viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg"><polygon points="167.75724,318 352.24276,318 440,470 80,470" transform="matrix(1.222,0,0,1.222,-57.78,-113.39)"/><polygon points="333.1902,285 186.8098,285 260,158.23085" transform="matrix(1.222,0,0,1.222,-57.78,-113.39)"/></svg>
+      PHARAOH
+    </div>
+    <div class="group">Operate</div>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-7h-6v7H4a1 1 0 01-1-1V9.5z"/></svg>Home</a>
+    <a class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="1"/><line x1="8" y1="20" x2="16" y2="20"/></svg>Endpoints</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg>Backend Agent</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Coding Agent</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>End-User Agent</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/></svg>Master Agent</a>
+    <div class="group">Govern</div>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Guardrails</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><line x1="3" y1="9" x2="21" y2="9"/></svg>IT Knowledge Base</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Activity &amp; Audit</a>
+    <div class="spacer"></div>
+    <div class="user">
+      <div class="avatar">RP</div>
+      <div>
+        <div class="name">Riya Patel</div>
+        <div class="role">Senior IT Operations</div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="crumbs">ENDPOINTS · <strong>SFG-DEN-LAPTOP-042</strong></div>
+      <div class="spacer"></div>
+      <button class="btn ghost" style="margin-right:6px;">Remote KVM</button>
+      <button class="btn">Start Session →</button>
+    </div>
+
+    <div class="page">
+      <div class="page-title">
+        <h1>sfg-den-laptop-042</h1>
+        <span class="pill green">ONLINE</span>
+        <span class="pill cyan">AGENT v2.4.1</span>
+        <span class="pill gold">MIGRATION COHORT 3</span>
+      </div>
+      <div class="page-sub">macOS 13.6.1 · Apple M2 Pro · Endpoint Agent active · last seen 43s ago · Denver office · assigned to D. Kowalski</div>
+
+      <div class="tabs">
+        <a class="active">Overview</a>
+        <a>Agent Sessions (4)</a>
+        <a>Software</a>
+        <a>Security</a>
+        <a>History</a>
+      </div>
+
+      <div class="grid-2c" style="margin-bottom: 12px;">
+        <!-- System card -->
+        <div class="card">
+          <h3>System</h3>
+          <div class="stat-row">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div style="flex:1">
+              <div class="label">Operating System</div>
+              <div class="value">macOS Ventura 13.6.1</div>
+            </div>
+            <span class="pill green">UP TO DATE</span>
+          </div>
+          <div class="stat-row">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+            <div style="flex:1">
+              <div class="label">CPU — Apple M2 Pro · 12-core</div>
+              <div class="value">12% avg · 4.2% agent overhead</div>
+              <div class="bar-wrap"><div class="bar-fill ok" style="width:12%"></div></div>
+            </div>
+          </div>
+          <div class="stat-row">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
+            <div style="flex:1">
+              <div class="label">RAM — 32 GB unified</div>
+              <div class="value">18.4 GB used · 13.6 GB free</div>
+              <div class="bar-wrap"><div class="bar-fill warn" style="width:57%"></div></div>
+            </div>
+          </div>
+          <div class="stat-row">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <div style="flex:1">
+              <div class="label">Storage — 1 TB SSD</div>
+              <div class="value">342 GB used · 682 GB free</div>
+              <div class="bar-wrap"><div class="bar-fill ok" style="width:34%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Security + Network -->
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div class="card">
+            <h3>Security Posture</h3>
+            <div class="row-flex between" style="padding:6px 0; border-bottom:1px solid var(--line-soft);">
+              <span style="font-size:12.5px;">FileVault encryption</span><span class="accent-green" style="font-size:12px;font-weight:600;">✓ enabled</span>
+            </div>
+            <div class="row-flex between" style="padding:6px 0; border-bottom:1px solid var(--line-soft);">
+              <span style="font-size:12.5px;">Gatekeeper</span><span class="accent-green" style="font-size:12px;font-weight:600;">✓ enforced</span>
+            </div>
+            <div class="row-flex between" style="padding:6px 0; border-bottom:1px solid var(--line-soft);">
+              <span style="font-size:12.5px;">SentinelOne EDR</span><span class="accent-green" style="font-size:12px;font-weight:600;">✓ active</span>
+            </div>
+            <div class="row-flex between" style="padding:6px 0;">
+              <span style="font-size:12.5px;">Screen lock timeout</span><span class="accent-amber" style="font-size:12px;font-weight:600;">⚠ 10 min (policy: 5)</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Network</h3>
+            <div class="row"><span class="k">IP (internal)</span><span class="v">10.42.18.77</span></div>
+            <div class="row"><span class="k">VPN</span><span class="v accent-green">Connected · Denver PoP</span></div>
+            <div class="row"><span class="k">Wi-Fi</span><span class="v">Corp-DEN-5G · -54 dBm</span></div>
+            <div class="row"><span class="k">DNS</span><span class="v">10.0.0.1 (internal resolver)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3c">
+        <!-- Observations -->
+        <div class="card">
+          <h3>Live Observations</h3>
+          <div class="observation"><div class="dot green"></div><div><span class="accent-green" style="font-weight:600;">Healthy</span> — no pending policy violations</div></div>
+          <div class="observation"><div class="dot amber"></div><div><span class="accent-amber" style="font-weight:600;">Drift</span> — screen lock timeout 10 min, policy allows 5</div></div>
+          <div class="observation"><div class="dot cyan"></div><div><span class="accent-cyan" style="font-weight:600;">Queued</span> — Win11 migration cohort 3 scheduled 14:00</div></div>
+          <div class="observation"><div class="dot green"></div><div><span class="accent-green" style="font-weight:600;">Verified</span> — DNS cache cleared 12:31 by Endpoint Agent</div></div>
+        </div>
+
+        <!-- Recent Sessions -->
+        <div class="card">
+          <h3>Recent Agent Sessions</h3>
+          <div class="session-item">
+            <span class="agent-tag">Endpoint</span>
+            <div style="flex:1;"><div style="font-weight:500;font-size:12px;">DNS cache cleared</div><div style="color:var(--text-dim);font-size:11px;">12:31 · 4s · auto-approved</div></div>
+            <span class="pill green">DONE</span>
+          </div>
+          <div class="session-item">
+            <span class="agent-tag">Endpoint</span>
+            <div style="flex:1;"><div style="font-weight:500;font-size:12px;">Screensaver drift detected</div><div style="color:var(--text-dim);font-size:11px;">11:54 · queued remediation</div></div>
+            <span class="pill amber">QUEUED</span>
+          </div>
+          <div class="session-item">
+            <span class="agent-tag">Backend</span>
+            <div style="flex:1;"><div style="font-weight:500;font-size:12px;">Okta group sync verified</div><div style="color:var(--text-dim);font-size:11px;">09:12 · session-2801</div></div>
+            <span class="pill green">DONE</span>
+          </div>
+          <div class="session-item">
+            <span class="agent-tag">Endpoint</span>
+            <div style="flex:1;"><div style="font-weight:500;font-size:12px;">SentinelOne update applied</div><div style="color:var(--text-dim);font-size:11px;">Yesterday 18:04 · 12s</div></div>
+            <span class="pill green">DONE</span>
+          </div>
+        </div>
+
+        <!-- Machine Knowledge -->
+        <div class="card">
+          <h3>Machine Knowledge</h3>
+          <div class="row"><span class="k">Assigned user</span><span class="v">D. Kowalski · Engineering</span></div>
+          <div class="row"><span class="k">Location</span><span class="v">Denver · Floor 3 · Desk B-12</span></div>
+          <div class="row"><span class="k">Enrolled</span><span class="v">2024-03-18 · 14 mo</span></div>
+          <div class="row"><span class="k">Known quirks</span><span class="v">Bluetooth stack restarts needed ~2×/week</span></div>
+          <div class="row"><span class="k">KB articles</span><span class="v accent-cyan">3 linked</span></div>
+          <div class="row"><span class="k">Prior fixes</span><span class="v">12 auto-resolved</span></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

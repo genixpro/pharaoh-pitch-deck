@@ -1,0 +1,1417 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>WELL Health Autonomous IT Transformation</title>
+
+  <!-- Reveal.js core -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+  <!-- A minimal dark base; we override almost everything -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="theme" />
+
+  <!-- Pharaoh custom theme -->
+  <link rel="stylesheet" href="styles/pharaoh-deck.css" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- =================================================
+         TITLE
+         ================================================= -->
+    <section class="hero" data-background-color="#07101d">
+      <div style="display:grid;grid-template-columns:1.35fr 1fr;gap:3.5rem;align-items:center;">
+        <div>
+          <div class="hero-eyebrow">MAY 2026 · CONFIDENTIAL</div>
+          <h1 class="hero-title" style="font-size:5rem;line-height:0.98;">
+            <span style="font-weight:300;color:var(--p-text-secondary);">WELL Health</span><br/>
+            <span class="gradient-gold">Autonomous&nbsp;IT</span><br/>
+            <span class="gradient-gold">Transformation</span>
+          </h1>
+          <p class="hero-sub mt-3" style="max-width:44ch;">
+            Building the technology to make WELL's IT operations fully autonomous &mdash; the most operationally advanced fleet in healthcare.
+          </p>
+          <div class="mt-4" style="color:var(--p-text-dim);font-size:0.92rem;letter-spacing:0.08em;">
+            Bradley Arsenault
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:1.5rem;">
+          <img src="assets/well-logo-white.png" alt="WELL Health" style="width:100%;max-width:480px;height:auto;filter:drop-shadow(0 0 40px rgba(125,201,255,0.15));" />
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         SECTION DIVIDER: OPENING ACT
+         ================================================= -->
+    <section class="divider" data-background-color="#07101d">
+      <div class="eyebrow gold">Part I</div>
+      <h1 class="gradient-gold">The Revolution in Software Development.</h1>
+    </section>
+
+    <!-- =================================================
+         OPENING ACT — Personal story 1
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="split-50-50">
+        <div>
+          <div class="eyebrow">The view from inside</div>
+          <h2>The steamroller we <em>all saw coming.</em></h2>
+          <p class="mt-3">
+            For a decade I'd been working in AI. The capability curves were exponential. The headlines were screaming the same thing every week &mdash; "AI will replace developers by 2026."
+          </p>
+          <p style="color:var(--p-text-primary);font-size:1.05rem;line-height:1.55;border-left:3px solid var(--p-cyan-700);padding-left:1rem;margin-top:1.2rem;">
+            Not theoretically terrifying &mdash; <strong>personally</strong> terrifying. Coding wasn't just my job. It was my craft, my identity, the thing I'd given a decade of my life to. And the technology I loved was training itself to make me obsolete.
+          </p>
+          <p class="mt-3" style="color:var(--p-text-muted);font-size:0.95rem;">
+            The question wasn't <em>if</em> the steamroller would arrive. It was whether there'd be anything left for people like me when it did.
+          </p>
+        </div>
+        <div class="card glow-cyan" style="padding:0.6rem 1.8rem 2rem;">
+          <div class="tag muted mb-2">HEADLINES · 2024</div>
+          <ul style="font-size:0.95rem;margin:0.4em 0;">
+            <li>"AI will write 90% of code within two years"</li>
+            <li>"The end of the human programmer"</li>
+            <li>"Software engineers brace for mass layoffs"</li>
+            <li>"Junior devs already being phased out"</li>
+          </ul>
+          <p class="dim mt-2" style="font-size:0.85rem;font-style:italic;margin:0;">
+            &mdash; every tech publication, every Monday morning
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         OPENING ACT — Part 2: the twist
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="eyebrow">Then the threshold was crossed</div>
+      <h2>It went from <span class="gradient-cyan">curiosity</span> to <span class="gradient-gold">revolution.</span></h2>
+      <div class="grid-3 mt-3" style="gap:1.4rem;">
+        <div class="card" style="padding:0.75rem 1.4rem 1.7rem;border-color:rgba(255,255,255,0.10);">
+          <div class="tag muted mb-1">UNTIL EARLY 2025</div>
+          <h3 style="color:var(--p-text-secondary);font-size:1.05rem;margin:0.5rem 0 0.5rem 0;">Promising. Not quite working.</h3>
+          <p style="color:var(--p-text-muted);font-size:0.92rem;line-height:1.5;margin:0;">I'd been watching coding agents for years. We all tried them. They almost worked &mdash; not quite enough to bet on.</p>
+        </div>
+        <div class="card glow-cyan" style="padding:0.75rem 1.4rem 1.7rem;">
+          <div class="tag mb-1">THEN: CLAUDE CODE</div>
+          <h3 style="color:var(--p-text-primary);font-size:1.05rem;margin:0.5rem 0 0.5rem 0;">The threshold crossed.</h3>
+          <p style="color:var(--p-text-secondary);font-size:0.92rem;line-height:1.5;margin:0;">Agents started writing code <strong>faster and more accurately than almost any human.</strong> Suddenly &mdash; not "promising" &mdash; <em>actually working in practice.</em></p>
+        </div>
+        <div class="card glow-gold" style="padding:0.75rem 1.4rem 1.7rem;">
+          <div class="tag gold mb-1">DEALYZER &middot; 2025</div>
+          <h3 style="color:var(--p-text-primary);font-size:1.05rem;margin:0.5rem 0 0.5rem 0;">Six-month miracle.</h3>
+          <p style="color:var(--p-text-secondary);font-size:0.92rem;line-height:1.5;margin:0;">You all know <strong>Dealyzer</strong> &mdash; shipped in six months, with a level of polish and accuracy that was <strong>impossible a year ago.</strong></p>
+        </div>
+      </div>
+      <p class="lead mt-3" style="max-width:none;font-size:1.25rem;margin-top:2rem;">
+        The most core part of my job was replaced &mdash; and I moved to a higher level. <em>More strategic, more valuable to the business, dramatically more gratifying.</em> This isn't displacement. This is the most empowered I've ever felt as a builder.
+      </p>
+    </section>
+
+    <!-- =================================================
+         OPENING ACT — The hook
+         ================================================= -->
+    <section class="divider" data-background-color="#07101d">
+      <div class="eyebrow">But here's what I couldn't stop thinking about</div>
+      <h1 style="font-size:5.5rem;">
+        Where is the <span class="gradient-cyan">Claude&nbsp;Code</span><br/>
+        for <span class="gradient-gold">IT?</span>
+      </h1>
+      <p class="lead center-text mt-3" style="margin-left:auto;margin-right:auto;max-width:66ch;">
+        Engineers got a transformative co-pilot. IT teams are still running PowerShell scripts through opaque MDM tooling that <strong>break 70% of the time.</strong>
+      </p>
+    </section>
+
+    <!-- =================================================
+         COMPETITORS — Matrix (moved here, before vision)
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="eyebrow">Where existing tools fall short</div>
+      <h2>Nothing on the market is <span class="gradient-cyan">what WELL Health IT actually needs.</span></h2>
+
+      <div class="mt-3">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Claude Code /<br/>Codex</th>
+            <th>OpenClaw /<br/>Computer Use</th>
+            <th>Traditional<br/>RMM / MDM</th>
+            <th>AIOps<br/>(Dynatrace, etc.)</th>
+            <th class="pharaoh-col">Pharaoh</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-name">LLM-driven, agentic</td>
+            <td class="yes">&check;</td>
+            <td class="yes">&check;</td>
+            <td class="no">&times;</td>
+            <td class="partial">partial</td>
+            <td class="pharaoh-col yes">&check;</td>
+          </tr>
+          <tr>
+            <td class="row-name">Operates on real endpoints (not source code)</td>
+            <td class="no">&times;</td>
+            <td class="yes">&check;</td>
+            <td class="yes">&check;</td>
+            <td class="no">&times;</td>
+            <td class="pharaoh-col yes">&check;</td>
+          </tr>
+          <tr>
+            <td class="row-name">Heterogeneous fleet (Win / Mac / Linux)</td>
+            <td class="no">&times;</td>
+            <td class="partial">single host</td>
+            <td class="yes">&check;</td>
+            <td class="yes">&check;</td>
+            <td class="pharaoh-col yes">&check;</td>
+          </tr>
+          <tr>
+            <td class="row-name">Enterprise RBAC + tenant isolation</td>
+            <td class="no">&times;</td>
+            <td class="no">&times;</td>
+            <td class="yes">&check;</td>
+            <td class="yes">&check;</td>
+            <td class="pharaoh-col yes">&check;</td>
+          </tr>
+          <tr>
+            <td class="row-name">Policy-gated automation with approvals</td>
+            <td class="no">&times;</td>
+            <td class="no">&times;</td>
+            <td class="partial">basic</td>
+            <td class="no">&times;</td>
+            <td class="pharaoh-col yes">&check;</td>
+          </tr>
+          <tr>
+            <td class="row-name">Closed-loop self-healing (detect&rarr;fix&rarr;verify)</td>
+            <td class="no">&times;</td>
+            <td class="no">&times;</td>
+            <td class="no">&times;</td>
+            <td class="partial">detect only</td>
+            <td class="pharaoh-col yes">&check;</td>
+          </tr>
+          <tr>
+            <td class="row-name">End-user chat triage with autonomous resolution</td>
+            <td class="no">&times;</td>
+            <td class="no">&times;</td>
+            <td class="no">&times;</td>
+            <td class="no">&times;</td>
+            <td class="pharaoh-col yes">&check;</td>
+          </tr>
+          <tr>
+            <td class="row-name">Code / IaC integration for systemic fixes</td>
+            <td class="partial">code only</td>
+            <td class="no">&times;</td>
+            <td class="no">&times;</td>
+            <td class="no">&times;</td>
+            <td class="pharaoh-col yes">&check;</td>
+          </tr>
+          <tr>
+            <td class="row-name">Durable / hardware access (KVM, OOB)</td>
+            <td class="no">&times;</td>
+            <td class="no">&times;</td>
+            <td class="no">&times;</td>
+            <td class="no">&times;</td>
+            <td class="pharaoh-col yes">&check;</td>
+          </tr>
+          <tr>
+            <td class="row-name">Full audit trail of every agent action</td>
+            <td class="partial">code only</td>
+            <td class="no">&times;</td>
+            <td class="partial">basic</td>
+            <td class="yes">&check;</td>
+            <td class="pharaoh-col yes">&check;</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="mt-4" style="display:flex;align-items:center;gap:2rem;padding:1.4rem 2rem;background:linear-gradient(135deg,rgba(125,201,255,0.07),rgba(7,16,29,0));border:1px solid var(--p-line-cyan);border-radius:14px;">
+        <div style="font-size:3.2rem;font-weight:800;background:var(--p-gradient-cyan);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1;white-space:nowrap;flex-shrink:0;letter-spacing:-0.04em;">10 / 10</div>
+        <div style="width:1px;height:60px;background:var(--p-line-cyan);flex-shrink:0;opacity:0.5;"></div>
+        <div>
+          <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.22em;color:var(--p-cyan-500);margin-bottom:0.4rem;font-weight:600;">The gap</div>
+          <p style="font-size:1.02rem;color:var(--p-text-secondary);margin:0;line-height:1.5;">Nobody is building what <strong>Enterprise IT teams actually need</strong> &mdash; a comprehensive platform for autonomous IT, with the policy controls, guardrails, and military-grade security built into the core.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         VISION — One sentence
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="split-50-50" style="gap:3rem;">
+        <div>
+          <div class="eyebrow">In my personal time</div>
+          <h2 style="margin-bottom:1.4rem;">I've been building the solution.<br/>Introducing <span class="gradient-gold">Pharaoh.</span></h2>
+          <p class="lead" style="font-size:1.25rem;">
+            On my own time, outside of work, I've been building the technology to make IT operations <em>fully autonomous</em>.
+          </p>
+          <p class="mt-3" style="font-size:1rem;">
+            Months of focused engineering. A real architecture &mdash; endpoint agents, self-healing loops, policy enforcement, the works. <strong>It's now ready for production testing.</strong>
+          </p>
+          <p class="mt-3" style="font-size:0.95rem;color:var(--p-text-secondary);">
+            I'm bringing it to WELL first &mdash; because you have the scale, the urgency, and the vision to be its <strong>founding sponsor and anchor deployment.</strong> If WELL backs this, WELL shapes what it becomes.
+          </p>
+          <div class="mt-3" style="display:inline-flex;align-items:center;gap:0.6rem;padding:0.5rem 1rem;background:rgba(242,210,139,0.06);border:1px solid rgba(242,210,139,0.3);border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--p-gold-400);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            getpharaoh.com
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;">
+          <!-- Custom SVG: autonomous IT vision diagram -->
+          <svg viewBox="0 0 540 460" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:540px;">
+            <defs>
+              <radialGradient id="vCoreGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgb(242,210,139)" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="rgb(242,210,139)" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="vLineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="rgb(125,201,255)" stop-opacity="0.7"/>
+                <stop offset="100%" stop-color="rgb(242,210,139)" stop-opacity="0.5"/>
+              </linearGradient>
+              <radialGradient id="vEndpointGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgb(125,201,255)" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="rgb(125,201,255)" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+
+            <!-- Outer orbit ring -->
+            <circle cx="270" cy="230" r="180" fill="none" stroke="rgba(125,201,255,0.12)" stroke-width="1" stroke-dasharray="2 6"/>
+            <circle cx="270" cy="230" r="120" fill="none" stroke="rgba(242,210,139,0.18)" stroke-width="1" stroke-dasharray="2 6"/>
+
+            <!-- Central glow -->
+            <circle cx="270" cy="230" r="100" fill="url(#vCoreGlow)" opacity="0.7"/>
+
+            <!-- Connecting lines from center to endpoints -->
+            <g stroke="url(#vLineGrad)" stroke-width="1.3" stroke-dasharray="4 4" fill="none">
+              <line x1="270" y1="230" x2="100" y2="90"/>
+              <line x1="270" y1="230" x2="440" y2="90"/>
+              <line x1="270" y1="230" x2="40" y2="230"/>
+              <line x1="270" y1="230" x2="500" y2="230"/>
+              <line x1="270" y1="230" x2="100" y2="370"/>
+              <line x1="270" y1="230" x2="440" y2="370"/>
+            </g>
+
+            <!-- Endpoints (computer/device icons in glowing rounded squares) -->
+            <g>
+              <!-- Top-left endpoint -->
+              <circle cx="100" cy="90" r="36" fill="url(#vEndpointGlow)"/>
+              <rect x="78" y="74" width="44" height="30" rx="4" fill="rgba(7,16,29,0.95)" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <line x1="90" y1="108" x2="110" y2="108" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <line x1="100" y1="104" x2="100" y2="108" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <!-- Top-right endpoint -->
+              <circle cx="440" cy="90" r="36" fill="url(#vEndpointGlow)"/>
+              <rect x="418" y="74" width="44" height="30" rx="4" fill="rgba(7,16,29,0.95)" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <line x1="430" y1="108" x2="450" y2="108" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <line x1="440" y1="104" x2="440" y2="108" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <!-- Left endpoint -->
+              <circle cx="40" cy="230" r="36" fill="url(#vEndpointGlow)"/>
+              <rect x="18" y="214" width="44" height="30" rx="4" fill="rgba(7,16,29,0.95)" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <line x1="30" y1="248" x2="50" y2="248" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <line x1="40" y1="244" x2="40" y2="248" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <!-- Right endpoint -->
+              <circle cx="500" cy="230" r="36" fill="url(#vEndpointGlow)"/>
+              <rect x="478" y="214" width="44" height="30" rx="4" fill="rgba(7,16,29,0.95)" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <line x1="490" y1="248" x2="510" y2="248" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <line x1="500" y1="244" x2="500" y2="248" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <!-- Bottom-left endpoint -->
+              <circle cx="100" cy="370" r="36" fill="url(#vEndpointGlow)"/>
+              <rect x="78" y="354" width="44" height="30" rx="4" fill="rgba(7,16,29,0.95)" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <line x1="90" y1="388" x2="110" y2="388" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <line x1="100" y1="384" x2="100" y2="388" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <!-- Bottom-right endpoint -->
+              <circle cx="440" cy="370" r="36" fill="url(#vEndpointGlow)"/>
+              <rect x="418" y="354" width="44" height="30" rx="4" fill="rgba(7,16,29,0.95)" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <line x1="430" y1="388" x2="450" y2="388" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+              <line x1="440" y1="384" x2="440" y2="388" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+            </g>
+
+            <!-- Pulse dots on lines -->
+            <circle cx="185" cy="160" r="3" fill="rgb(125,201,255)" opacity="0.9"/>
+            <circle cx="355" cy="160" r="3" fill="rgb(125,201,255)" opacity="0.9"/>
+            <circle cx="185" cy="300" r="3" fill="rgb(242,210,139)" opacity="0.9"/>
+            <circle cx="355" cy="300" r="3" fill="rgb(242,210,139)" opacity="0.9"/>
+            <circle cx="155" cy="230" r="3" fill="rgb(125,201,255)" opacity="0.9"/>
+            <circle cx="385" cy="230" r="3" fill="rgb(125,201,255)" opacity="0.9"/>
+
+            <!-- Central Pharaoh pyramid -->
+            <g transform="translate(270, 230)">
+              <circle cx="0" cy="0" r="52" fill="rgba(7,16,29,0.95)" stroke="rgb(242,210,139)" stroke-width="2"/>
+              <g transform="translate(-26, -39) scale(0.1)">
+                <polygon points="167.75724,318 352.24276,318 440,470 80,470" fill="rgb(242,210,139)" transform="matrix(1.222,0,0,1.222,-57.78,-113.39)"/>
+                <polygon points="333.1902,285 186.8098,285 260,158.23085" fill="rgb(242,210,139)" transform="matrix(1.222,0,0,1.222,-57.78,-113.39)"/>
+              </g>
+              <text x="0" y="23" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgb(242,210,139)" letter-spacing="0.3em">PHARAOH</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         WELL TRANSFORMATION — Today vs 12 months
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="eyebrow">The transformation</div>
+      <h2>From <span style="color:var(--p-amber-400);">where WELL IT is today</span> to <span class="gradient-cyan">where it could be in 12 months.</span></h2>
+
+      <div class="grid-2 mt-4" style="gap:2rem;align-items:stretch;">
+        <!-- TODAY -->
+        <div style="background:rgba(255,117,109,0.04);border:1px solid rgba(255,117,109,0.22);border-radius:14px;padding:1.4rem 1.6rem;display:flex;flex-direction:column;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.3em;color:var(--p-red-400);margin-bottom:0.4rem;">TODAY</div>
+          <h3 style="font-size:1.4rem;color:var(--p-text-primary);margin:0 0 1rem 0;font-weight:700;">IT in survival mode.</h3>
+          <div style="display:flex;align-items:flex-start;gap:0.8rem;padding:0.55rem 0;border-bottom:1px solid var(--p-line-soft);">
+            <div style="color:var(--p-red-400);font-size:1.2rem;line-height:1;margin-top:1px;font-weight:600;">×</div>
+            <div style="color:var(--p-text-secondary);font-size:0.92rem;line-height:1.4;">Repetitive tickets eat the majority of IT time</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.8rem;padding:0.55rem 0;border-bottom:1px solid var(--p-line-soft);">
+            <div style="color:var(--p-red-400);font-size:1.2rem;line-height:1;margin-top:1px;font-weight:600;">×</div>
+            <div style="color:var(--p-text-secondary);font-size:0.92rem;line-height:1.4;">Drift creeps in unnoticed across sites</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.8rem;padding:0.55rem 0;border-bottom:1px solid var(--p-line-soft);">
+            <div style="color:var(--p-red-400);font-size:1.2rem;line-height:1;margin-top:1px;font-weight:600;">×</div>
+            <div style="color:var(--p-text-secondary);font-size:0.92rem;line-height:1.4;">Multi-site, multi-clinic = multi-headache</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.8rem;padding:0.55rem 0;border-bottom:1px solid var(--p-line-soft);">
+            <div style="color:var(--p-red-400);font-size:1.2rem;line-height:1;margin-top:1px;font-weight:600;">×</div>
+            <div style="color:var(--p-text-secondary);font-size:0.92rem;line-height:1.4;">Every IT person bottlenecked by manual toil</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.8rem;padding:0.55rem 0;border-bottom:1px solid var(--p-line-soft);">
+            <div style="color:var(--p-red-400);font-size:1.2rem;line-height:1;margin-top:1px;font-weight:600;">×</div>
+            <div style="color:var(--p-text-secondary);font-size:0.92rem;line-height:1.4;">Compliance audit burden falls on humans</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.8rem;padding:0.55rem 0;border-bottom:1px solid var(--p-line-soft);">
+            <div style="color:var(--p-red-400);font-size:1.2rem;line-height:1;margin-top:1px;font-weight:600;">×</div>
+            <div style="color:var(--p-text-secondary);font-size:0.92rem;line-height:1.4;">IT measured by how few things break</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.8rem;padding:0.55rem 0;">
+            <div style="color:var(--p-red-400);font-size:1.2rem;line-height:1;margin-top:1px;font-weight:600;">×</div>
+            <div style="color:var(--p-text-secondary);font-size:0.92rem;line-height:1.4;">"AI transformation" remains a slogan, not a reality</div>
+          </div>
+        </div>
+        <!-- 12 MONTHS -->
+        <div style="background:linear-gradient(135deg,rgba(125,201,255,0.07),rgba(242,210,139,0.04));border:1px solid var(--p-line-cyan);border-radius:14px;padding:1.4rem 1.6rem;display:flex;flex-direction:column;box-shadow:0 0 50px rgba(125,201,255,0.14);">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.3em;color:var(--p-cyan-400);margin-bottom:0.4rem;">IN 12 MONTHS</div>
+          <h3 style="font-size:1.4rem;color:var(--p-text-primary);margin:0 0 1rem 0;font-weight:700;">IT as a <span class="gradient-cyan">strategic engine.</span></h3>
+          <div style="display:flex;align-items:flex-start;gap:0.8rem;padding:0.55rem 0;border-bottom:1px solid var(--p-line-soft);">
+            <div style="color:var(--p-green-400);font-size:1rem;line-height:1;margin-top:2px;font-weight:700;">&check;</div>
+            <div style="color:var(--p-text-secondary);font-size:0.92rem;line-height:1.4;">Tickets close <strong>before a human sees them</strong></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.8rem;padding:0.55rem 0;border-bottom:1px solid var(--p-line-soft);">
+            <div style="color:var(--p-green-400);font-size:1rem;line-height:1;margin-top:2px;font-weight:700;">&check;</div>
+            <div style="color:var(--p-text-secondary);font-size:0.92rem;line-height:1.4;">Continuous monitoring &amp; <strong>autonomous repair</strong></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.8rem;padding:0.55rem 0;border-bottom:1px solid var(--p-line-soft);">
+            <div style="color:var(--p-green-400);font-size:1rem;line-height:1;margin-top:2px;font-weight:700;">&check;</div>
+            <div style="color:var(--p-text-secondary);font-size:0.92rem;line-height:1.4;"><strong>Fleet-wide intelligence</strong> &mdash; one brain across every site</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.8rem;padding:0.55rem 0;border-bottom:1px solid var(--p-line-soft);">
+            <div style="color:var(--p-green-400);font-size:1rem;line-height:1;margin-top:2px;font-weight:700;">&check;</div>
+            <div style="color:var(--p-text-secondary);font-size:0.92rem;line-height:1.4;">Every admin, ops, &amp; security person <strong>massively force-multiplied</strong></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.8rem;padding:0.55rem 0;border-bottom:1px solid var(--p-line-soft);">
+            <div style="color:var(--p-green-400);font-size:1rem;line-height:1;margin-top:2px;font-weight:700;">&check;</div>
+            <div style="color:var(--p-text-secondary);font-size:0.92rem;line-height:1.4;">Policy enforced on every action, <strong>fully audited</strong></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.8rem;padding:0.55rem 0;border-bottom:1px solid var(--p-line-soft);">
+            <div style="color:var(--p-green-400);font-size:1rem;line-height:1;margin-top:2px;font-weight:700;">&check;</div>
+            <div style="color:var(--p-text-secondary);font-size:0.92rem;line-height:1.4;">IT measured by <strong>strategic impact</strong></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.8rem;padding:0.55rem 0;">
+            <div style="color:var(--p-gold-500);font-size:1rem;line-height:1;margin-top:2px;font-weight:700;">&check;</div>
+            <div style="color:var(--p-text-secondary);font-size:0.92rem;line-height:1.4;"><strong style="color:var(--p-gold-400);">WELL IT becomes the proof point</strong> of what a fully AI-powered enterprise team looks like</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         VISION — What is it like?
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="grid-2" style="gap:3rem;">
+        <div>
+          <div class="eyebrow">The analogy</div>
+          <h2 class="mt-2">Think of Pharaoh as<br/><span class="gradient-cyan">Claude Code</span>,<br/>but for <span class="gradient-gold">WELL's IT team.</span></h2>
+          <p class="lead mt-3">
+            Or: OpenClaw — purpose-built for enterprise scale, security, and oversight.
+          </p>
+          <div class="mt-3" style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+            <span class="tag">AGENTIC</span>
+            <span class="tag gold">ENTERPRISE-NATIVE</span>
+            <span class="tag green">POLICY-GOVERNED</span>
+            <span class="tag">AUDITABLE</span>
+          </div>
+        </div>
+        <div class="stack-v">
+          <div class="card glow-cyan">
+            <h3><span class="accent-cyan">→</span> Responds to IT support tickets autonomously</h3>
+            <p>Same way Claude Code reads issues and ships PRs — Pharaoh reads tickets and ships fixes.</p>
+          </div>
+          <div class="card glow-cyan">
+            <h3><span class="accent-cyan">→</span> Continuously monitors endpoints for problems</h3>
+            <p>Drift detection, health checks, security posture, recurring-issue patterns — across the fleet.</p>
+          </div>
+          <div class="card glow-cyan">
+            <h3><span class="accent-cyan">→</span> Automatically heals issues, with policy enforcement</h3>
+            <p>Detect → investigate → repair → verify → report. The self-healing loop runs while you sleep.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         PROBLEM — Traditional MDM fails
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="eyebrow">Why traditional MDM/RMM has plateaued</div>
+      <h2>IT tooling stopped at <span class="accent-red">scripts and policies</span>.<br/>The hard part was always <em>everything else</em>.</h2>
+
+      <div class="grid-2 mt-4" style="gap:1.8rem;">
+        <div class="card" style="display:flex;align-items:flex-start;gap:1.3rem;padding:1.4rem 1.6rem;">
+          <div style="width:78px;height:78px;border-radius:14px;background:rgba(255,117,109,0.10);border:1px solid rgba(255,117,109,0.32);display:flex;align-items:center;justify-content:center;color:var(--p-red-400);flex-shrink:0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="42" height="42"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+          </div>
+          <div>
+            <h3 style="margin:0.1rem 0 0.5rem 0;">Static scripts can't handle reality</h3>
+            <p>Every machine has different state, history, software, settings, environment quirks. A script that fixes 80% of cases still leaves 20% as a human ticket.</p>
+          </div>
+        </div>
+        <div class="card" style="display:flex;align-items:flex-start;gap:1.3rem;padding:1.4rem 1.6rem;">
+          <div style="width:78px;height:78px;border-radius:14px;background:rgba(255,117,109,0.10);border:1px solid rgba(255,117,109,0.32);display:flex;align-items:center;justify-content:center;color:var(--p-red-400);flex-shrink:0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="42" height="42"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div>
+            <h3 style="margin:0.1rem 0 0.5rem 0;">Detection &ne; resolution</h3>
+            <p>Monitoring tells you something's wrong. Then a human has to investigate, diagnose, decide, fix, verify, and document &mdash; the whole expensive part.</p>
+          </div>
+        </div>
+        <div class="card" style="display:flex;align-items:flex-start;gap:1.3rem;padding:1.4rem 1.6rem;">
+          <div style="width:78px;height:78px;border-radius:14px;background:rgba(255,117,109,0.10);border:1px solid rgba(255,117,109,0.32);display:flex;align-items:center;justify-content:center;color:var(--p-red-400);flex-shrink:0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="42" height="42"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          </div>
+          <div>
+            <h3 style="margin:0.1rem 0 0.5rem 0;">One-size-fits-all policies are blunt</h3>
+            <p>Modern fleets are heterogeneous. Generic policy enforcement either over-restricts users or quietly fails on the long tail of edge cases.</p>
+          </div>
+        </div>
+        <div class="card" style="display:flex;align-items:flex-start;gap:1.3rem;padding:1.4rem 1.6rem;">
+          <div style="width:78px;height:78px;border-radius:14px;background:rgba(255,117,109,0.10);border:1px solid rgba(255,117,109,0.32);display:flex;align-items:center;justify-content:center;color:var(--p-red-400);flex-shrink:0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="42" height="42"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h3 style="margin:0.1rem 0 0.5rem 0;">Disconnected machines need help most</h3>
+            <p>Exactly when ordinary remote tooling fails. There's no durable access path &mdash; and no way for the platform to keep working when normal channels break.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4" style="display:flex;align-items:center;gap:2rem;padding:1.2rem 2rem;background:linear-gradient(135deg,rgba(255,117,109,0.06),rgba(7,16,29,0));border:1px solid rgba(255,117,109,0.28);border-radius:14px;">
+        <div style="font-size:3.5rem;font-weight:800;color:var(--p-red-400);line-height:1;white-space:nowrap;flex-shrink:0;letter-spacing:-0.04em;">70%</div>
+        <div style="width:1px;height:52px;background:rgba(255,117,109,0.35);flex-shrink:0;"></div>
+        <div>
+          <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.22em;color:var(--p-red-400);margin-bottom:0.4rem;font-weight:600;">Of legacy IT scripts fail in production</div>
+          <p style="font-size:1.05rem;color:var(--p-text-secondary);margin:0;line-height:1.5;">The result: <strong>WELL's IT team spends the majority of its time on repetitive endpoint emergencies</strong> instead of architecture, security, and strategy.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         HOW IT WORKS — Architecture infographic
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="eyebrow">The Pharaoh agent architecture</div>
+      <h2 class="mb-2">A mesh of specialized agents,<br/><span class="gradient-cyan">orchestrated under policy.</span></h2>
+
+      <!-- Architecture diagram v2: Master centered top, 3 specialists middle, external clusters bottom, Pharaoh Core as bottom band -->
+      <div style="display:flex;align-items:center;justify-content:center;margin-top:0.6rem;">
+        <svg viewBox="0 0 1480 820" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:1480px;height:auto;">
+          <defs>
+            <linearGradient id="archGoldGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgb(242,210,139)" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="rgb(169,136,62)" stop-opacity="0.7"/>
+            </linearGradient>
+            <radialGradient id="archMasterGlow2" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgb(242,210,139)" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="rgb(242,210,139)" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="archClusterGlow2" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgb(125,201,255)" stop-opacity="0.18"/>
+              <stop offset="100%" stop-color="rgb(125,201,255)" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- ===== ROW 1 (y=80): USER → END-USER AGENT → MASTER AGENT (left-aligned flow into centered master) ===== -->
+          <!-- User -->
+          <g transform="translate(110, 80)">
+            <circle cx="0" cy="0" r="38" fill="rgba(7,16,29,0.95)" stroke="rgba(125,201,255,0.4)" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <circle cx="0" cy="-5" r="10" fill="none" stroke="rgb(125,201,255)" stroke-width="1.8"/>
+            <path d="M -14 16 Q 0 4, 14 16" fill="none" stroke="rgb(125,201,255)" stroke-width="1.8"/>
+            <text x="0" y="56" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="rgb(125,201,255)" letter-spacing="0.2em">END USER</text>
+          </g>
+
+          <!-- Arrow user → End-User Agent -->
+          <line x1="155" y1="80" x2="248" y2="80" stroke="rgba(125,201,255,0.55)" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <polygon points="246,76 254,80 246,84" fill="rgba(125,201,255,0.75)"/>
+          <text x="201" y="68" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(125,201,255,0.65)" letter-spacing="0.18em">CHATS</text>
+
+          <!-- End-User Agent -->
+          <g transform="translate(335, 80)">
+            <rect x="-85" y="-44" width="170" height="88" rx="12" fill="rgba(19,43,68,0.95)" stroke="rgb(125,201,255)" stroke-width="1.5"/>
+            <text x="0" y="-12" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="rgb(233,239,248)">End-User Agent</text>
+            <text x="0" y="10" text-anchor="middle" font-family="Inter, sans-serif" font-size="10.5" fill="rgba(147,165,191,0.95)">Triages tickets</text>
+            <text x="0" y="28" text-anchor="middle" font-family="Inter, sans-serif" font-size="10.5" fill="rgba(147,165,191,0.95)">Chat &middot; Slack &middot; Email</text>
+          </g>
+
+          <!-- Arrow End-User → Master -->
+          <line x1="425" y1="80" x2="600" y2="80" stroke="rgba(242,210,139,0.6)" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <polygon points="598,76 606,80 598,84" fill="rgba(242,210,139,0.8)"/>
+          <text x="513" y="68" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(242,210,139,0.7)" letter-spacing="0.18em">ROUTES TO</text>
+
+          <!-- MASTER AGENT (centered horizontally around x=740) -->
+          <g transform="translate(740, 80)">
+            <circle cx="0" cy="0" r="120" fill="url(#archMasterGlow2)"/>
+            <rect x="-145" y="-52" width="290" height="104" rx="16" fill="rgba(20,40,70,0.96)" stroke="url(#archGoldGrad2)" stroke-width="2" filter="drop-shadow(0 0 20px rgba(242,210,139,0.4))"/>
+            <g transform="translate(-115, -22)">
+              <polygon points="0,28 24,28 30,40 -6,40" fill="rgb(242,210,139)"/>
+              <polygon points="6,24 18,24 12,12" fill="rgb(242,210,139)"/>
+            </g>
+            <text x="20" y="-12" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="700" fill="rgb(242,210,139)">MASTER AGENT</text>
+            <text x="20" y="10" text-anchor="middle" font-family="Inter, sans-serif" font-size="11.5" fill="rgba(233,239,248,0.85)">Plans &middot; coordinates</text>
+            <text x="20" y="28" text-anchor="middle" font-family="Inter, sans-serif" font-size="11.5" fill="rgba(233,239,248,0.85)">Oversees fleet-wide work</text>
+          </g>
+
+          <!-- ===== ROW 2 (y=300): 3 SPECIALIST AGENTS centered below master ===== -->
+          <!-- Connector: Master → 3 specialists (vertical trunk + horizontal branches) -->
+          <line x1="740" y1="132" x2="740" y2="200" stroke="rgba(242,210,139,0.55)" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <text x="740" y="190" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(242,210,139,0.7)" letter-spacing="0.22em" style="paint-order:stroke;stroke:rgb(7,16,29);stroke-width:5;">OVERSEES &amp; DELEGATES</text>
+          <!-- Horizontal branch line -->
+          <line x1="290" y1="200" x2="1190" y2="200" stroke="rgba(242,210,139,0.45)" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <!-- Drops to each agent -->
+          <line x1="290" y1="200" x2="290" y2="260" stroke="rgba(242,210,139,0.45)" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <line x1="740" y1="200" x2="740" y2="260" stroke="rgba(242,210,139,0.45)" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <line x1="1190" y1="200" x2="1190" y2="260" stroke="rgba(242,210,139,0.45)" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+          <!-- Endpoint Agent -->
+          <g transform="translate(290, 310)">
+            <rect x="-135" y="-50" width="270" height="100" rx="12" fill="rgba(19,43,68,0.96)" stroke="rgb(125,201,255)" stroke-width="1.5" filter="drop-shadow(0 0 14px rgba(125,201,255,0.25))"/>
+            <g transform="translate(-105, -22)" stroke="rgb(125,201,255)" stroke-width="1.8" fill="none">
+              <rect x="0" y="0" width="32" height="22" rx="2"/>
+              <line x1="6" y1="28" x2="26" y2="28"/>
+              <line x1="16" y1="22" x2="16" y2="28"/>
+            </g>
+            <text x="20" y="-12" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="rgb(233,239,248)">Endpoint Agent</text>
+            <text x="20" y="10" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="rgba(147,165,191,0.95)">Local diagnosis &amp; repair</text>
+            <text x="20" y="28" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="rgba(147,165,191,0.95)">Windows &middot; macOS &middot; Linux</text>
+          </g>
+
+          <!-- Backend Agent -->
+          <g transform="translate(740, 310)">
+            <rect x="-135" y="-50" width="270" height="100" rx="12" fill="rgba(19,43,68,0.96)" stroke="rgb(125,201,255)" stroke-width="1.5" filter="drop-shadow(0 0 14px rgba(125,201,255,0.25))"/>
+            <g transform="translate(-105, -22)" stroke="rgb(125,201,255)" stroke-width="1.8" fill="none">
+              <circle cx="16" cy="13" r="13"/>
+              <path d="M 3 13 H 29 M 16 0 Q 26 13, 16 26 M 16 0 Q 6 13, 16 26"/>
+            </g>
+            <text x="20" y="-12" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="rgb(233,239,248)">Backend Agent</text>
+            <text x="20" y="10" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="rgba(147,165,191,0.95)">Operates SaaS consoles</text>
+            <text x="20" y="28" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="rgba(147,165,191,0.95)">via the browser</text>
+          </g>
+
+          <!-- Coding Agent -->
+          <g transform="translate(1190, 310)">
+            <rect x="-135" y="-50" width="270" height="100" rx="12" fill="rgba(19,43,68,0.96)" stroke="rgb(125,201,255)" stroke-width="1.5" filter="drop-shadow(0 0 14px rgba(125,201,255,0.25))"/>
+            <g transform="translate(-105, -22)" stroke="rgb(125,201,255)" stroke-width="1.8" fill="none">
+              <polyline points="20 4 32 13 20 22"/>
+              <polyline points="12 4 0 13 12 22"/>
+            </g>
+            <text x="20" y="-12" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="rgb(233,239,248)">Coding Agent</text>
+            <text x="20" y="10" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="rgba(147,165,191,0.95)">Drafts IaC pull requests</text>
+            <text x="20" y="28" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="rgba(147,165,191,0.95)">for systemic fixes</text>
+          </g>
+
+          <!-- ===== ROW 3 (y=510): External clusters ===== -->
+          <!-- Connectors agents → clusters with "ACTS ON" label -->
+          <g stroke="rgba(125,201,255,0.45)" stroke-width="1.4" fill="none" stroke-dasharray="3 4">
+            <line x1="290" y1="365" x2="290" y2="475"/>
+            <line x1="740" y1="365" x2="740" y2="475"/>
+            <line x1="1190" y1="365" x2="1190" y2="475"/>
+          </g>
+          <text x="290" y="430" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(125,201,255,0.55)" letter-spacing="0.2em" style="paint-order:stroke;stroke:rgb(7,16,29);stroke-width:5;">ACTS ON</text>
+          <text x="740" y="430" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(125,201,255,0.55)" letter-spacing="0.2em" style="paint-order:stroke;stroke:rgb(7,16,29);stroke-width:5;">OPERATES</text>
+          <text x="1190" y="430" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(125,201,255,0.55)" letter-spacing="0.2em" style="paint-order:stroke;stroke:rgb(7,16,29);stroke-width:5;">OPENS PRS IN</text>
+
+          <!-- DEVICES cluster -->
+          <g transform="translate(290, 580)">
+            <circle cx="0" cy="0" r="110" fill="url(#archClusterGlow2)"/>
+            <rect x="-155" y="-55" width="310" height="110" rx="12" fill="rgba(7,16,29,0.55)" stroke="rgba(125,201,255,0.32)" stroke-width="1" stroke-dasharray="4 3"/>
+            <g fill="rgba(7,16,29,0.95)" stroke="rgb(125,201,255)" stroke-width="1.2">
+              <rect x="-128" y="-30" width="30" height="20" rx="2"/>
+              <rect x="-90"  y="-30" width="30" height="20" rx="2"/>
+              <rect x="-52"  y="-30" width="30" height="20" rx="2"/>
+              <rect x="-14"  y="-30" width="30" height="20" rx="2"/>
+              <rect x="24"   y="-30" width="30" height="20" rx="2"/>
+              <rect x="62"   y="-30" width="30" height="20" rx="2"/>
+              <rect x="100"  y="-30" width="30" height="20" rx="2"/>
+            </g>
+            <text x="0" y="16" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="rgb(125,201,255)">DEVICES</text>
+            <text x="0" y="34" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="rgba(147,165,191,0.85)">Laptops, desktops, kiosks across every clinic</text>
+          </g>
+
+          <!-- SAAS &amp; CLOUD cluster -->
+          <g transform="translate(740, 580)">
+            <circle cx="0" cy="0" r="110" fill="url(#archClusterGlow2)"/>
+            <rect x="-155" y="-55" width="310" height="110" rx="12" fill="rgba(7,16,29,0.55)" stroke="rgba(125,201,255,0.32)" stroke-width="1" stroke-dasharray="4 3"/>
+            <g transform="translate(21, 8)" fill="none" stroke="rgb(125,201,255)" stroke-width="1.4">
+              <path d="M -118 -18 q -8 0 -8 -10 q 0 -10 10 -10 q 0 -10 14 -10 q 14 0 14 12 q 8 0 8 8 q 0 10 -8 10 z"/>
+              <path d="M -58 -18 q -8 0 -8 -10 q 0 -10 10 -10 q 0 -10 14 -10 q 14 0 14 12 q 8 0 8 8 q 0 10 -8 10 z"/>
+              <path d="M 2 -18 q -8 0 -8 -10 q 0 -10 10 -10 q 0 -10 14 -10 q 14 0 14 12 q 8 0 8 8 q 0 10 -8 10 z"/>
+              <path d="M 62 -18 q -8 0 -8 -10 q 0 -10 10 -10 q 0 -10 14 -10 q 14 0 14 12 q 8 0 8 8 q 0 10 -8 10 z"/>
+            </g>
+            <text x="0" y="16" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="rgb(125,201,255)">SAAS &amp; CLOUD</text>
+            <text x="0" y="34" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="rgba(147,165,191,0.85)">Okta &middot; M365 &middot; GitHub &middot; Azure &middot; Cloudflare &middot; &hellip;</text>
+          </g>
+
+          <!-- CODE REPOS cluster -->
+          <g transform="translate(1190, 580)">
+            <circle cx="0" cy="0" r="110" fill="url(#archClusterGlow2)"/>
+            <rect x="-155" y="-55" width="310" height="110" rx="12" fill="rgba(7,16,29,0.55)" stroke="rgba(125,201,255,0.32)" stroke-width="1" stroke-dasharray="4 3"/>
+            <g transform="translate(12, -10)" fill="none" stroke="rgb(125,201,255)" stroke-width="1.4">
+              <circle cx="-112" cy="-22" r="5"/><circle cx="-112" cy="-2" r="5"/><line x1="-112" y1="-17" x2="-112" y2="-7"/>
+              <circle cx="-72"  cy="-22" r="5"/><circle cx="-72"  cy="-2" r="5"/><line x1="-72"  y1="-17" x2="-72"  y2="-7"/>
+              <circle cx="-32"  cy="-22" r="5"/><circle cx="-32"  cy="-2" r="5"/><line x1="-32"  y1="-17" x2="-32"  y2="-7"/>
+              <circle cx="8"    cy="-22" r="5"/><circle cx="8"    cy="-2" r="5"/><line x1="8"    y1="-17" x2="8"    y2="-7"/>
+              <circle cx="48"   cy="-22" r="5"/><circle cx="48"   cy="-2" r="5"/><line x1="48"   y1="-17" x2="48"   y2="-7"/>
+              <circle cx="88"   cy="-22" r="5"/><circle cx="88"   cy="-2" r="5"/><line x1="88"   y1="-17" x2="88"   y2="-7"/>
+            </g>
+            <text x="0" y="16" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="rgb(125,201,255)">CODE REPOS</text>
+            <text x="0" y="34" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="rgba(147,165,191,0.85)">Terraform &middot; Ansible &middot; deployment manifests</text>
+          </g>
+
+          <!-- ===== PHARAOH CORE — horizontal bottom band wrapping everything above ===== -->
+          <g transform="translate(740, 760)">
+            <rect x="-720" y="-32" width="1440" height="64" rx="12" fill="rgba(242,210,139,0.07)" stroke="rgba(242,210,139,0.45)" stroke-width="1.4" stroke-dasharray="6 4" filter="drop-shadow(0 0 24px rgba(242,210,139,0.18))"/>
+            <g transform="translate(-680, 0)">
+              <rect x="0" y="-18" width="36" height="36" rx="8" fill="rgba(242,210,139,0.15)" stroke="rgba(242,210,139,0.55)" stroke-width="1.4"/>
+              <path d="M 18 -10 L 18 12 M 8 -2 L 18 -10 L 28 -2" fill="none" stroke="rgb(242,210,139)" stroke-width="2"/>
+            </g>
+            <text x="-625" y="-4" font-family="JetBrains Mono, monospace" font-size="10" fill="rgb(242,210,139)" letter-spacing="0.32em" font-weight="700">PHARAOH CORE</text>
+            <text x="-625" y="14" font-family="Inter, sans-serif" font-size="11" fill="rgba(233,239,248,0.82)">Every action above passes through layered governance</text>
+            <g transform="translate(0, 0)" font-family="JetBrains Mono, monospace" font-size="11" fill="rgba(242,210,139,0.85)" letter-spacing="0.18em" font-weight="600">
+              <text x="-150" y="3" text-anchor="middle">RBAC</text>
+              <text x="-30"  y="3" text-anchor="middle">POLICY</text>
+              <text x="120"  y="3" text-anchor="middle">AUDIT</text>
+              <text x="270"  y="3" text-anchor="middle">APPROVALS</text>
+              <text x="450"  y="3" text-anchor="middle">HUMAN OVERSIGHT</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- =================================================
+         HOW IT WORKS — Self-healing loop diagram
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="eyebrow">The continuous self-healing loop</div>
+      <h2 style="margin-bottom:2.4rem;">Detect &nbsp;&rarr;&nbsp; Investigate &nbsp;&rarr;&nbsp; Repair &nbsp;&rarr;&nbsp; Verify &nbsp;&rarr;&nbsp; Report</h2>
+
+      <div class="loop">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="n">DETECT</div>
+          <h4>Notice the issue</h4>
+          <p>Unhealthy state, user complaints, policy drift, recurring patterns.</p>
+          <div class="arrow">→</div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="n">INVESTIGATE</div>
+          <h4>Gather evidence</h4>
+          <p>Live endpoint state, logs, history, runbooks, prior fixes.</p>
+          <div class="arrow">→</div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="n">REPAIR</div>
+          <h4>Apply the safest fix</h4>
+          <p>Under policy. Request approval for anything sensitive.</p>
+          <div class="arrow">→</div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="n">VERIFY</div>
+          <h4>Confirm the result</h4>
+          <p>Did the repair actually work? Re-check before closing.</p>
+          <div class="arrow">→</div>
+        </div>
+        <div class="step">
+          <div class="step-num">05</div>
+          <div class="n">REPORT</div>
+          <h4>Audit + learn</h4>
+          <p>Evidence, change record, outcome. Feed the next loop.</p>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.8rem;margin-top:1.8rem;padding:0 0.3rem;">
+        <div style="flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(125,201,255,0.25));"></div>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:rgba(125,201,255,0.55);letter-spacing:0.28em;white-space:nowrap;">&#x21A9; LOOP REPEATS CONTINUOUSLY &middot; 24 / 7</span>
+        <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(125,201,255,0.25),transparent);"></div>
+      </div>
+
+      <p class="lead center-text" style="margin:2.4rem auto 0 auto;max-width:64ch;font-size:1.2rem;">
+        The same closed loop runs across every endpoint, every SaaS app, every IaC repo &mdash; for as long as WELL's fleet exists.
+      </p>
+    </section>
+
+    <!-- =================================================
+         SECURITY — Rings of defense
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="split-40-60" style="align-items:center;">
+        <div>
+          <div class="eyebrow">Security as the product</div>
+          <h2 class="mb-2">Autonomy <em>WELL Health</em> can actually trust.</h2>
+          <p class="lead mt-2">
+            Autonomy without governance is a non-starter for healthcare IT. Pharaoh treats security, policy, and auditability as <strong>core product behavior</strong> &mdash; built for environments where PHIPA, PIPEDA, and patient-data sensitivity are non-negotiable.
+          </p>
+          <ul class="mt-3">
+            <li><strong>RBAC + tenant isolation</strong> at every layer</li>
+            <li><strong>Scoped execution boundaries</strong> per agent role</li>
+            <li><strong>Policy-gated automation</strong> with explicit approval levels</li>
+            <li><strong>Soft guardrails</strong>: agent self-checks, dry-runs, simulation</li>
+            <li><strong>Hard guardrails</strong>: sandboxed execution, hardware-enforced limits</li>
+            <li><strong>Full audit trail</strong> — every prompt, action, result is replayable</li>
+            <li><strong>Human override</strong> at any moment — pause, terminate, redirect</li>
+          </ul>
+        </div>
+        <div class="center-text" style="display:flex;align-items:center;justify-content:center;">
+          <div class="rings" style="transform:scale(1.35);transform-origin:center center;">
+            <div class="ring r1"><span>AUDIT &amp; REPLAY</span></div>
+            <div class="ring r2"><span>POLICY &amp; APPROVALS</span></div>
+            <div class="ring r3"><span>SANDBOX &amp; RBAC</span></div>
+            <div class="ring r4"><span>SCOPED AGENT</span></div>
+            <div class="core">Action</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         BENEFITS
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="eyebrow">What WELL gets</div>
+      <h2>Four wins for <span class="gradient-cyan">WELL's IT team.</span></h2>
+      <div class="grid-4 mt-4">
+        <div class="card glow-cyan feature">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <h3>High availability</h3>
+          <p>Endpoints stay up. When something starts to fail, it gets caught and fixed before users feel it. Uptime becomes the default.</p>
+        </div>
+        <div class="card glow-cyan feature">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3>Rapid resolution</h3>
+          <p>Tickets close in minutes, not days. The agent acts the moment a problem surfaces &mdash; even at 3am.</p>
+        </div>
+        <div class="card glow-cyan feature">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Compliance by default</h3>
+          <p>Every action governed, scoped, audited. PHIPA, PIPEDA, internal policy &mdash; enforced at the layer the agent acts, not retroactively.</p>
+        </div>
+        <div class="card glow-cyan feature">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <h3>Fleet-wide intelligence</h3>
+          <p>Fix one machine, learn for all of them. Knowledge compounds with every repair across every clinic.</p>
+        </div>
+      </div>
+
+      <div class="grid-3 mt-4" style="gap:3rem;">
+        <div class="stat" style="display:flex;flex-direction:column;align-items:stretch;text-align:center;">
+          <div class="big" style="margin:0 auto;">70%</div>
+          <div class="label" style="margin-top:0.6rem;max-width:none;text-align:justify;text-align-last:center;">Of routine IT tickets are repetitive, scriptable patterns &mdash; the exact target for autonomous resolution.</div>
+        </div>
+        <div class="stat" style="display:flex;flex-direction:column;align-items:stretch;text-align:center;">
+          <div class="big" style="margin:0 auto;">24/7</div>
+          <div class="label" style="margin-top:0.6rem;max-width:none;text-align:justify;text-align-last:center;">Continuous monitoring and self-healing. Pharaoh doesn't sleep, take holidays, or quit.</div>
+        </div>
+        <div class="stat" style="display:flex;flex-direction:column;align-items:stretch;text-align:center;">
+          <div class="big gold" style="margin:0 auto;">&infin;</div>
+          <div class="label" style="margin-top:0.6rem;max-width:none;text-align:justify;text-align-last:center;">Scale: one agent per endpoint, coordinated by a central plane. Linear cost, exponential coverage.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         THE ASK — Build an IT revolution together
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="eyebrow">The ask</div>
+      <h2>Join me in building an <span class="gradient-gold">IT revolution.</span></h2>
+      <p class="lead mt-2" style="max-width:none;font-size:1.2rem;color:var(--p-text-secondary);">
+        WELL doesn't need to lead the autonomous IT product category. But you can be the <em>leader in AI adoption</em> &mdash; the first real production deployment of a technology that's about to transform every IT organization on the planet.
+      </p>
+
+      <div class="grid-3 mt-4">
+        <div class="ask-card">
+          <div class="label">01 &middot; First-mover</div>
+          <div class="number" style="font-size:2.6rem;">Be there first.</div>
+          <div style="font-size:0.98rem;color:var(--p-text-secondary);margin-top:0.7rem;line-height:1.5;">
+            Pharaoh deploys on WELL's fleet from day one. Real endpoints, real tickets, real fixes &mdash; we shape the product around what WELL's operations actually look like.
+          </div>
+        </div>
+        <div class="ask-card">
+          <div class="label">02 &middot; Solves a real pain</div>
+          <div class="number" style="font-size:2.6rem;">Scale, solved.</div>
+          <div style="font-size:0.98rem;color:var(--p-text-secondary);margin-top:0.7rem;line-height:1.5;">
+            WELL is in a real scaling challenge that traditional IT tooling can't fix. This is the technology that does. Your team gets the autonomous future before anyone else.
+          </div>
+        </div>
+        <div class="ask-card">
+          <div class="label">03 &middot; AI leadership</div>
+          <div class="number" style="font-size:2.6rem;">Lead the wave.</div>
+          <div style="font-size:0.98rem;color:var(--p-text-secondary);margin-top:0.7rem;line-height:1.5;">
+            Every C-suite is racing to point to a real AI deployment. This is the kind of <em>concrete proof point</em> the board and the market notice &mdash; a story worth telling.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         CLOSING — Once in a generation
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="split-50-50" style="align-items:center;">
+        <div>
+          <div class="eyebrow">The argument in three points</div>
+          <h2>Revolutionary opportunity. And we can <span class="gradient-gold">make a lot of money</span> doing it.</h2>
+          <p class="lead mt-3">
+            Agentic AI just unlocked a category that was impossible 12 months ago. The first credible entrant in autonomous IT defines the space. <strong>We move now &mdash; or get steamrolled by a Silicon Valley startup that does.</strong>
+          </p>
+        </div>
+        <div class="stack-v">
+          <div class="card glow-gold">
+            <h3><span class="accent-gold">1 &middot;</span> The window is open <em>right now</em>.</h3>
+            <p>LLMs are finally capable. Within 12 months the obvious entrants will arrive &mdash; well-funded and aggressive. First-mover advantage in B2B compounds for years.</p>
+          </div>
+          <div class="card glow-gold">
+            <h3><span class="accent-gold">2 &middot;</span> It solves a <em>critical, current</em> WELL problem.</h3>
+            <p>WELL operates thousands of endpoints across hundreds of clinics. The IT scaling pain is real and growing. Pharaoh is the technology that fixes it.</p>
+          </div>
+          <div class="card glow-gold">
+            <h3><span class="accent-gold">3 &middot;</span> Secures WELL's <em>position</em> in this category.</h3>
+            <p>The organizations that capture the most from transformative technology aren't always its builders. They're its <strong>earliest believers</strong> &mdash; present when the category was still forming, when the terms were still generous, and when the upside was still intact.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         MARKET SIZE — TAM slide (investor pitch style)
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="eyebrow">The market we're playing in</div>
+      <h2>And the numbers are <span class="gradient-gold">absolutely massive.</span></h2>
+
+      <div class="market-chart mt-4">
+        <div class="market-row">
+          <div class="market-label">ITSM</div>
+          <div class="market-bar-track"><div class="market-bar-inner" style="width:33.6%"><span class="market-bar-val">$15.0B</span></div></div>
+          <div class="market-cagr">&rarr; $32B by 2031 &middot; 16.5% CAGR</div>
+        </div>
+        <div class="market-row">
+          <div class="market-label">AIOps</div>
+          <div class="market-bar-track"><div class="market-bar-inner" style="width:32.2%"><span class="market-bar-val">$14.4B</span></div></div>
+          <div class="market-cagr">&rarr; $41B by 2030 &middot; 30%+ CAGR</div>
+        </div>
+        <div class="market-row">
+          <div class="market-label">UEM / MDM</div>
+          <div class="market-bar-track"><div class="market-bar-inner" style="width:23.5%"><span class="market-bar-val">$10.5B</span></div></div>
+          <div class="market-cagr">&rarr; $57B by 2034 &middot; 23.7% CAGR</div>
+        </div>
+        <div class="market-row">
+          <div class="market-label">RMM</div>
+          <div class="market-bar-track"><div class="market-bar-inner" style="width:10.7%"><span class="market-bar-val">$4.8B</span></div></div>
+          <div class="market-cagr">&rarr; $14B by 2034 &middot; 12.8% CAGR</div>
+        </div>
+        <div class="market-row market-total">
+          <div class="market-label">COMBINED</div>
+          <div class="market-bar-track"><div class="market-bar-inner gold-bar" style="width:100%"><span class="market-bar-val">$44.7B today &rarr; $140B+ by 2030</span></div></div>
+          <div class="market-cagr" style="color:var(--p-gold-600);font-weight:600;">&nbsp;</div>
+        </div>
+      </div>
+
+      <div class="grid-3 mt-4" style="gap:1.5rem;">
+        <div style="position:relative;background:linear-gradient(160deg,rgba(242,210,139,0.11) 0%,rgba(242,210,139,0.03) 60%,rgba(7,16,29,0.6) 100%);border:1px solid rgba(242,210,139,0.32);border-top:2px solid rgba(242,210,139,0.75);border-radius:14px;padding:1.5rem 1.8rem 1.6rem;box-shadow:0 0 60px rgba(242,210,139,0.10),0 28px 56px rgba(0,0,0,0.45);overflow:hidden;">
+          <div style="position:absolute;top:0;left:0;right:0;height:60px;background:radial-gradient(ellipse at 50% 0%,rgba(242,210,139,0.14),transparent 70%);pointer-events:none;"></div>
+          <div class="tag gold" style="margin-bottom:1.1rem;">SEAT-BASED</div>
+          <div style="font-size:3.4rem;font-weight:800;background:var(--p-gradient-gold);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1;letter-spacing:-0.04em;">$250<span style="font-size:1.15rem;font-weight:400;background:none;-webkit-text-fill-color:var(--p-gold-600);">/mo</span></div>
+          <div style="height:1px;background:linear-gradient(90deg,rgba(242,210,139,0.3),transparent);margin:1rem 0;"></div>
+          <p style="margin:0;font-size:0.88rem;color:var(--p-text-secondary);line-height:1.55;">per IT person. <strong>40M+ IT pros globally.</strong> &asymp; $120B annual run-rate ceiling on seats alone.</p>
+        </div>
+        <div style="position:relative;background:linear-gradient(160deg,rgba(242,210,139,0.11) 0%,rgba(242,210,139,0.03) 60%,rgba(7,16,29,0.6) 100%);border:1px solid rgba(242,210,139,0.32);border-top:2px solid rgba(242,210,139,0.75);border-radius:14px;padding:1.5rem 1.8rem 1.6rem;box-shadow:0 0 60px rgba(242,210,139,0.10),0 28px 56px rgba(0,0,0,0.45);overflow:hidden;">
+          <div style="position:absolute;top:0;left:0;right:0;height:60px;background:radial-gradient(ellipse at 50% 0%,rgba(242,210,139,0.14),transparent 70%);pointer-events:none;"></div>
+          <div class="tag gold" style="margin-bottom:1.1rem;">PER ENDPOINT</div>
+          <div style="font-size:3.4rem;font-weight:800;background:var(--p-gradient-gold);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1;letter-spacing:-0.04em;">$15<span style="font-size:1.15rem;font-weight:400;background:none;-webkit-text-fill-color:var(--p-gold-600);">/mo</span></div>
+          <div style="height:1px;background:linear-gradient(90deg,rgba(242,210,139,0.3),transparent);margin:1rem 0;"></div>
+          <p style="margin:0;font-size:0.88rem;color:var(--p-text-secondary);line-height:1.55;">per managed endpoint. <strong>2B+ enterprise endpoints.</strong> &asymp; $360B addressable at full agent penetration.</p>
+        </div>
+        <div style="position:relative;background:linear-gradient(160deg,rgba(242,210,139,0.11) 0%,rgba(242,210,139,0.03) 60%,rgba(7,16,29,0.6) 100%);border:1px solid rgba(242,210,139,0.32);border-top:2px solid rgba(242,210,139,0.75);border-radius:14px;padding:1.5rem 1.8rem 1.6rem;box-shadow:0 0 60px rgba(242,210,139,0.10),0 28px 56px rgba(0,0,0,0.45);overflow:hidden;">
+          <div style="position:absolute;top:0;left:0;right:0;height:60px;background:radial-gradient(ellipse at 50% 0%,rgba(242,210,139,0.14),transparent 70%);pointer-events:none;"></div>
+          <div class="tag gold" style="margin-bottom:1.1rem;">EARLY MOVER</div>
+          <div style="font-size:3.4rem;font-weight:800;background:var(--p-gradient-gold);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1;letter-spacing:-0.04em;">$140B<span style="font-size:1.15rem;font-weight:400;background:none;-webkit-text-fill-color:var(--p-gold-600);">&nbsp;market</span></div>
+          <div style="height:1px;background:linear-gradient(90deg,rgba(242,210,139,0.3),transparent);margin:1rem 0;"></div>
+          <p style="margin:0;font-size:0.88rem;color:var(--p-text-secondary);line-height:1.55;">A market this size creates <strong>many sustainable winners.</strong> Early movers who own a vertical or geography build durable, compounding revenue — no moonshot required.</p>
+        </div>
+      </div>
+
+      <p class="muted" style="font-size:0.78rem;line-height:1.5;text-align:center;margin-top:2rem;">
+        Sources: Fortune Business Insights, Mordor Intelligence, Business Research Insights, The Business Research Company &middot; 2026 projections from 2024&ndash;2025 analyst reports.
+      </p>
+    </section>
+
+    <!-- =================================================
+         CLOSING — Final slide
+         ================================================= -->
+    <section class="hero" data-background-color="#07101d">
+      <div class="hero-eyebrow">MAY 2026</div>
+      <h1 class="hero-title" style="font-size:4.2rem;line-height:1.05;">
+        <span style="font-weight:300;color:var(--p-text-secondary);">WELL Health gets the</span><br/>
+        <span class="gradient-gold">autonomous IT future first.</span><br/>
+        <span style="font-weight:300;color:var(--p-text-secondary);font-size:0.78em;">And we build a product that</span><br/>
+        <span style="font-weight:400;color:var(--p-text-primary);font-size:0.78em;">transforms the entire IT industry.</span>
+      </h1>
+
+      <div class="mt-4" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;max-width:1020px;">
+        <div style="padding:1.4rem 1.5rem;background:linear-gradient(160deg,rgba(242,210,139,0.10) 0%,rgba(242,210,139,0.03) 100%);border:1px solid rgba(242,210,139,0.32);border-top:2px solid rgba(242,210,139,0.6);border-radius:12px;box-shadow:0 0 40px rgba(242,210,139,0.08),0 16px 40px rgba(0,0,0,0.4);">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.28em;color:var(--p-gold-500);margin-bottom:0.8rem;">THE IMMEDIATE WIN</div>
+          <div style="font-size:0.95rem;color:var(--p-text-secondary);line-height:1.5;">WELL has a real, growing IT scaling problem. This solves it — and makes us the proof point that WELL leads in AI adoption.</div>
+        </div>
+        <div style="padding:1.4rem 1.5rem;background:linear-gradient(160deg,rgba(242,210,139,0.10) 0%,rgba(242,210,139,0.03) 100%);border:1px solid rgba(242,210,139,0.32);border-top:2px solid rgba(242,210,139,0.6);border-radius:12px;box-shadow:0 0 40px rgba(242,210,139,0.08),0 16px 40px rgba(0,0,0,0.4);">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.28em;color:var(--p-gold-500);margin-bottom:0.8rem;">THE STRATEGIC WIN</div>
+          <div style="font-size:0.95rem;color:var(--p-text-secondary);line-height:1.5;">The organizations that incubate category-defining technology — rather than buying it late — build compounding advantages. This is WELL's chance to be one of them.</div>
+        </div>
+        <div style="padding:1.4rem 1.5rem;background:linear-gradient(160deg,rgba(242,210,139,0.10) 0%,rgba(242,210,139,0.03) 100%);border:1px solid rgba(242,210,139,0.32);border-top:2px solid rgba(242,210,139,0.6);border-radius:12px;box-shadow:0 0 40px rgba(242,210,139,0.08),0 16px 40px rgba(0,0,0,0.4);">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.28em;color:var(--p-gold-500);margin-bottom:0.8rem;">THE FINANCIAL WIN</div>
+          <div style="font-size:0.95rem;color:var(--p-text-secondary);line-height:1.5;">A category like this makes whoever wins it <em>a lot</em> of money. There's no reason that winner has to be a Silicon Valley insider. We can be the winners.</div>
+        </div>
+      </div>
+
+      <p class="dim mt-4" style="font-size:0.95rem;padding-top:15px;">
+        Bradley Arsenault
+      </p>
+    </section>
+
+    <!-- =================================================
+         APPENDIX A — DIVIDER
+         ================================================= -->
+    <section class="divider" data-background-color="#07101d">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:2rem;">
+        <img src="assets/pharaoh-logo-white.svg" alt="Pharaoh" style="width:140px;height:auto;opacity:0.95;filter:drop-shadow(0 0 30px rgba(242,210,139,0.3));" />
+        <div class="eyebrow gold" style="margin:0;">Appendix A</div>
+        <h1 class="gradient-gold" style="margin:0;">A walkthrough of Pharaoh.</h1>
+        <p class="muted" style="font-size:1.05rem;max-width:60ch;text-align:center;margin:0;">
+          A deeper tour of every agent, surface, and capability &mdash; in the platform that already exists today.
+        </p>
+        <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;background:rgba(242,210,139,0.06);border:1px solid rgba(242,210,139,0.3);border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--p-gold-400);margin-top:0.5rem;">
+          getpharaoh.com
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         APPENDIX A.1 — Endpoint Agent
+         ================================================= -->
+    <section data-background-color="#07101d" style="padding-right:0;">
+      <div class="split-40-60" style="flex:1;min-height:0;align-items:center;">
+        <div>
+          <div class="tag mb-2">AGENT · BUILT</div>
+          <div class="eyebrow">Endpoint Agent</div>
+          <h2>Eyes, hands, and judgment on every device.</h2>
+          <p class="mt-3">
+            The Endpoint Agent runs natively on Windows, macOS, and Linux machines. It can see what the end user sees, inspect live system state, and execute safe repairs locally — even when the network is bad or the machine is in a degraded state.
+          </p>
+          <ul class="mt-2">
+            <li>Logs, services, processes, filesystem, OS configuration</li>
+            <li>Browser flows and desktop applications when needed</li>
+            <li>Cached policy + playbook scope for offline operation</li>
+            <li>Per-machine history; adapts to local quirks</li>
+          </ul>
+        </div>
+        <div class="screenshot">
+          <div class="browser-chrome">
+            <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+            <div class="url">app.pharaoh.dev / endpoints / sfg-den-laptop-042</div>
+          </div>
+          <div style="position:relative;overflow:hidden;padding-top:56%;"><img src="assets/screenshots/mockups/endpoint-agent.png" alt="Endpoint Agent Mockup" style="position:absolute;top:0;left:0;width:100%;height:auto;display:block;" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         APPENDIX A.2 — Backend Agent (mock)
+         ================================================= -->
+    <section data-background-color="#07101d" style="padding-left:0;">
+      <div class="split-60-40" style="flex:1;min-height:0;align-items:center;">
+        <div class="screenshot">
+          <div class="browser-chrome">
+            <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+            <div class="url">app.pharaoh.dev / agents / backend / session-2841</div>
+          </div>
+          <div style="position:relative;overflow:hidden;padding-top:50%;"><img src="assets/screenshots/mockups/backend-agent.png" alt="Backend Agent Mockup" style="position:absolute;top:0;left:0;width:100%;height:auto;display:block;" /></div>
+        </div>
+        <div>
+          <div class="tag gold mb-2">AGENT · ROADMAP</div>
+          <div class="eyebrow">Backend Agent</div>
+          <h2>Operates the cloud control plane.</h2>
+          <p class="mt-3">
+            Most modern IT problems aren't on the endpoint — they're in Okta, GitHub, Cloudflare, Azure, M365, or a dozen other SaaS consoles. The Backend Agent navigates those interfaces through the browser, executing changes under the same policy framework as endpoint actions.
+          </p>
+          <ul class="mt-2">
+            <li>Identity provisioning, group membership, MFA recovery</li>
+            <li>License management, vendor account changes</li>
+            <li>Cloud infrastructure adjustments under approval</li>
+            <li>Closes the loop: user issue → backend fix → verified state</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         APPENDIX A.3 — Coding Agent (mock)
+         ================================================= -->
+    <section data-background-color="#07101d" style="padding-right:0;">
+      <div class="split-40-60" style="flex:1;min-height:0;align-items:center;">
+        <div>
+          <div class="tag gold mb-2">AGENT · ROADMAP</div>
+          <div class="eyebrow">Coding Agent</div>
+          <h2>Proposes infrastructure-as-code fixes.</h2>
+          <p class="mt-3">
+            When a problem is systemic — a misconfigured Terraform module, a broken Ansible role, a flawed deployment manifest — the right fix isn't on the endpoint. The Coding Agent integrates with Claude Code and Codex to open PRs against your IaC repos.
+          </p>
+          <ul class="mt-2">
+            <li>Reads the issue from the End-User Agent or Sentinel</li>
+            <li>Locates the responsible config in IaC repos</li>
+            <li>Drafts a PR with rationale, evidence, and rollback plan</li>
+            <li>Hands off to IT engineering for human review</li>
+          </ul>
+        </div>
+        <div class="screenshot">
+          <div class="browser-chrome">
+            <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+            <div class="url">app.pharaoh.dev / agents / coding / pr-draft-118</div>
+          </div>
+          <img src="assets/screenshots/mockups/coding-agent.png" alt="Coding Agent Mockup" />
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         APPENDIX A.4 — End-User Agent (mock)
+         ================================================= -->
+    <section data-background-color="#07101d" style="padding-left:0;">
+      <div class="split-60-40" style="flex:1;min-height:0;align-items:center;">
+        <div class="screenshot">
+          <div class="browser-chrome">
+            <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+            <div class="url">help.pharaoh.dev / chat / ticket-PH-9412</div>
+          </div>
+          <div style="position:relative;overflow:hidden;padding-top:57%;"><img src="assets/screenshots/mockups/end-user-agent.png" alt="End-User Agent Mockup" style="position:absolute;top:0;left:0;width:100%;height:auto;display:block;" /></div>
+        </div>
+        <div>
+          <div class="tag gold mb-2">AGENT · ROADMAP</div>
+          <div class="eyebrow">End-User Agent</div>
+          <h2>The front door for IT support.</h2>
+          <p class="mt-3">
+            Users describe their problem in plain language — through chat, email, or your existing ticketing system. The End-User Agent triages, asks clarifying questions, and coordinates with the Endpoint Agent to actually <em>see what the user sees</em> and fix the issue directly.
+          </p>
+          <ul class="mt-2">
+            <li>Slack, Teams, email, Jira, Fresh Service integrations</li>
+            <li>Live screen-share with consent</li>
+            <li>Hands off to human only when needed, with full context</li>
+            <li>Tickets that previously took days close in minutes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         APPENDIX A.5 — Master Agent (mock)
+         ================================================= -->
+    <section data-background-color="#07101d" style="padding-right:0;">
+      <div class="split-40-60" style="flex:1;min-height:0;align-items:center;">
+        <div>
+          <div class="tag gold mb-2">AGENT · ROADMAP</div>
+          <div class="eyebrow">Master Agent</div>
+          <h2>Plans and executes fleet-wide initiatives.</h2>
+          <p class="mt-3">
+            Large IT projects — OS migrations, security baseline rollouts, application upgrades across thousands of endpoints — currently require months of careful planning and execution. The Master Agent plans, sequences, gates, and monitors these rollouts with built-in safety mechanisms.
+          </p>
+          <ul class="mt-2">
+            <li>Canary cohorts → staged ramps → fleet-wide deploy</li>
+            <li>Automatic rollback on health-signal regression</li>
+            <li>Per-cohort approval gates for sensitive changes</li>
+            <li>Real-time progress &amp; impact dashboards</li>
+          </ul>
+        </div>
+        <div class="screenshot">
+          <div class="browser-chrome">
+            <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+            <div class="url">app.pharaoh.dev / master / project / win11-migration</div>
+          </div>
+          <div style="position:relative;overflow:hidden;padding-top:58%;"><img src="assets/screenshots/mockups/master-agent.png" alt="Master Agent Mockup" style="position:absolute;top:0;left:0;width:100%;height:auto;display:block;" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         APPENDIX A.6 — Guardrails detail
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="eyebrow">Soft &amp; Hard Guardrails</div>
+      <h2>Layered defense, not a single fence.</h2>
+
+      <div class="grid-2 mt-4" style="gap:2rem;align-items:start;">
+        <div class="card" style="padding:1.4rem 1.5rem;">
+          <h3 class="accent-cyan mt-0 mb-2" style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.15em;font-weight:700;">Soft Guardrails — agent self-polices</h3>
+          <div class="guardrail-item">
+            <div class="guardrail-icon soft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M9 12l2 2 4-4m5 4a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <div class="guardrail-text"><strong>Pre-action reasoning</strong><span>Agent justifies each step against the goal before acting</span></div>
+          </div>
+          <div class="guardrail-item">
+            <div class="guardrail-icon soft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            <div class="guardrail-text"><strong>Dry-run mode</strong><span>Destructive actions simulate first before executing</span></div>
+          </div>
+          <div class="guardrail-item">
+            <div class="guardrail-icon soft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div class="guardrail-text"><strong>Confidence thresholds</strong><span>Low-confidence actions auto-escalate to human review</span></div>
+          </div>
+          <div class="guardrail-item">
+            <div class="guardrail-icon soft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+            <div class="guardrail-text"><strong>Self-critique</strong><span>Independent reviewer agent checks each plan</span></div>
+          </div>
+          <div class="guardrail-item">
+            <div class="guardrail-icon soft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
+            <div class="guardrail-text"><strong>Policy reminders</strong><span>Relevant policy injected into agent context at each step</span></div>
+          </div>
+        </div>
+        <div class="card" style="padding:1.4rem 1.5rem;border-color:rgba(242,210,139,0.25);">
+          <h3 class="accent-gold mt-0 mb-2" style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.15em;font-weight:700;">Hard Guardrails — system enforces</h3>
+          <div class="guardrail-item">
+            <div class="guardrail-icon hard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+            <div class="guardrail-text"><strong>RBAC + scoped capabilities</strong><span>Per agent role and tenant — no agent exceeds its permission set</span></div>
+          </div>
+          <div class="guardrail-item">
+            <div class="guardrail-icon hard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <div class="guardrail-text"><strong>Sandboxed execution</strong><span>Risky operations run in isolated environments first</span></div>
+          </div>
+          <div class="guardrail-item">
+            <div class="guardrail-icon hard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="guardrail-text"><strong>Approval gates</strong><span>Sensitive actions block until a human explicitly approves</span></div>
+          </div>
+          <div class="guardrail-item">
+            <div class="guardrail-icon hard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
+            <div class="guardrail-text"><strong>Hardware-enforced limits</strong><span>OS-level kernel constraints on every endpoint agent</span></div>
+          </div>
+          <div class="guardrail-item">
+            <div class="guardrail-icon hard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
+            <div class="guardrail-text"><strong>Immutable audit log</strong><span>Every prompt, decision, and action permanently recorded</span></div>
+          </div>
+          <div class="guardrail-item">
+            <div class="guardrail-icon hard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div>
+            <div class="guardrail-text"><strong>Kill switch</strong><span>Instant fleet-wide agent pause — one action halts everything</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card glow-gold mt-4" style="padding:1.4rem 1.8rem;">
+        <h3 style="color:var(--p-gold-500);">Why this matters</h3>
+        <p style="color:var(--p-text-secondary);font-size:1rem;">
+          Enterprise IT will not adopt autonomous agents they can't see, can't bound, and can't override. Pharaoh's governance model isn't a compliance afterthought — it is the unlock that lets the autonomous loop actually run in production.
+        </p>
+      </div>
+    </section>
+
+    <!-- =================================================
+         APPENDIX A.7 — Oversight & Escalations
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="split-40-60">
+        <div>
+          <div class="tag mb-2">SURFACE · BUILT</div>
+          <div class="eyebrow">Oversight &amp; Escalations</div>
+          <h2>Humans stay in command.</h2>
+          <p class="mt-3">
+            Operators see what every agent is doing, why, and with what evidence. They can approve, redirect, pause, or override in real time. Escalations come with full context — not "the script failed, please investigate."
+          </p>
+          <ul class="mt-2">
+            <li>Live session feed with structured agent transcripts</li>
+            <li>Per-action approval flows for sensitive operations</li>
+            <li>Replayable audit history for compliance and learning</li>
+            <li>Investigation cards with evidence + recommended action</li>
+          </ul>
+        </div>
+        <div class="screenshot">
+          <div class="browser-chrome">
+            <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+            <div class="url">app.pharaoh.dev / endpoints / sfg-den-laptop-042 / self-healing</div>
+          </div>
+          <img src="assets/screenshots/real/self-healing-sentinel.png" alt="Self-healing oversight" />
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         APPENDIX A.7B — Activity audit
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="split-60-40">
+        <div class="screenshot">
+          <div class="browser-chrome">
+            <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+            <div class="url">app.pharaoh.dev / endpoints / sfg-den-laptop-042 / activity</div>
+          </div>
+          <img src="assets/screenshots/real/self-healing-activity.png" alt="Self-healing activity audit" />
+        </div>
+        <div>
+          <div class="tag mb-2">SURFACE · BUILT</div>
+          <div class="eyebrow">Activity Timeline</div>
+          <h2>Every action, replayable.</h2>
+          <p class="mt-3">
+            Every self-healing run, every action, every outcome — captured with timestamps, evidence, and operator-visible explanations. Compliance teams get a complete audit trail. IT operators get a feedback loop that makes the next repair smarter.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         APPENDIX A.8 — Remote KVM
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="split-40-60">
+        <div>
+          <div class="tag mb-2">SURFACE · BUILT</div>
+          <div class="eyebrow">Remote KVM</div>
+          <h2>Durable access — even when the machine is dead.</h2>
+          <p class="mt-3">
+            Pharaoh integrates with hardware-assisted KVM devices (NanoKVM, OpenTerface) to provide a secondary access path into critical systems. When the OS is down, the network is unreachable, or the device won't boot — Pharaoh can still see the screen, press the keys, and even reinstall the OS.
+          </p>
+          <ul class="mt-2">
+            <li>BIOS-level access for boot recovery and reinstall</li>
+            <li>Works on any machine — even ones not running our agent</li>
+            <li>The AI can govern the most esoteric hardware</li>
+            <li>Pre-positioned access on critical infrastructure</li>
+          </ul>
+        </div>
+        <div class="screenshot">
+          <div class="browser-chrome">
+            <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+            <div class="url">app.pharaoh.dev / remote-kvm / sessions / 9821</div>
+          </div>
+          <img src="assets/screenshots/real/remote-kvm-session.png" alt="Remote KVM session" />
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         APPENDIX A.9 — Android App
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="split-60-40">
+        <div class="screenshot" style="background:linear-gradient(135deg,#0a1d3a 0%, #122a44 100%);padding:2rem;">
+          <img src="assets/screenshots/mockups/android-app.png" alt="Android App Mockup" style="max-width:340px;margin:0 auto;display:block;border-radius:32px;box-shadow:0 30px 80px rgba(0,0,0,0.6);" />
+        </div>
+        <div>
+          <div class="tag mb-2">SURFACE · BUILT</div>
+          <div class="eyebrow">Android Field App</div>
+          <h2>IT operations from anywhere.</h2>
+          <p class="mt-3">
+            On-site IT armed with AI guidance. The Android app turns any phone into a portable KVM — useful for esoteric machines outside the perimeter (lab equipment, industrial controllers, air-gapped systems).
+          </p>
+          <ul class="mt-2">
+            <li>Mobile control plane for the entire Pharaoh fleet</li>
+            <li>Phone-as-KVM for ad-hoc connections to specific machines</li>
+            <li>On-site remediation guided step-by-step by the agent</li>
+            <li>Works in degraded network conditions</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         APPENDIX A.10 — IT Knowledge Base
+         ================================================= -->
+    <section data-background-color="#07101d">
+      <div class="split-40-60">
+        <div>
+          <div class="tag mb-2">SURFACE · BUILT</div>
+          <div class="eyebrow">IT Knowledge Base</div>
+          <h2>Repairs reflect <em>your</em> environment.</h2>
+          <p class="mt-3">
+            Pharaoh learns your network architecture, runbooks, recurring issues, and approved fixes. Repairs use your conventions — not generic internet advice. The knowledge base compounds over time as the system handles more incidents.
+          </p>
+          <ul class="mt-2">
+            <li>Company-specific runbooks and IT documentation</li>
+            <li>Known-good configuration baselines per machine class</li>
+            <li>Prior repair outcomes inform next-time decisions</li>
+            <li>Operator feedback graduates patterns into trusted playbooks</li>
+          </ul>
+        </div>
+        <div class="screenshot">
+          <div class="browser-chrome">
+            <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+            <div class="url">app.pharaoh.dev / knowledge</div>
+          </div>
+          <img src="assets/screenshots/real/knowledge-list.png" alt="IT Knowledge Base" />
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         APPENDIX A.11 — Closing thank you
+         ================================================= -->
+    <section class="hero" data-background-color="#07101d">
+      <div class="hero-eyebrow">END · APPENDIX A</div>
+      <h1 class="hero-title" style="font-size:5.5rem;">
+        <span class="gradient-gold">Thank&nbsp;you.</span>
+      </h1>
+      <p class="hero-sub mt-3">
+        Questions? Let's get into it.
+      </p>
+      <div class="mt-4">
+        <div class="brand-mark">
+          <span class="pyramid"><svg viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg"><polygon points="167.75724,318 352.24276,318 440,470 80,470" transform="matrix(1.222,0,0,1.222,-57.78,-113.39)"/><polygon points="333.1902,285 186.8098,285 260,158.23085" transform="matrix(1.222,0,0,1.222,-57.78,-113.39)"/></svg></span>
+          PHARAOH · MAY 2026
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<!-- Reveal.js engine -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    width:  1600,
+    height: 1000,
+    margin: 0.04,
+    minScale: 0.2,
+    maxScale: 2.0,
+    center: false,
+    controls: true,
+    progress: true,
+    slideNumber: 'c/t',
+    hash: true,
+    transition: 'fade',
+    backgroundTransition: 'fade',
+    pdfSeparateFragments: false,
+  });
+</script>
+</body>
+</html>

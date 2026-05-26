@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Pharaoh Field App</title>
+  <link rel="stylesheet" href="pharaoh-app.css" />
+  <style>
+    body {
+      background: radial-gradient(ellipse at 50% 0%, #1a3a64 0%, #0a1d3a 60%, #07101d 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+    }
+    .app-content {
+      color: var(--text-primary);
+      font-size: 13px;
+    }
+    .app-content .top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 4px 14px;
+    }
+    .app-content .top .pyramid svg { width: 18px; height: 18px; }
+    .app-content .top .pyramid svg polygon { fill: var(--gold-500); }
+    .app-content .top .title { font-weight: 700; letter-spacing: 0.1em; font-size: 11px; text-transform: uppercase; }
+    .app-content .top .spacer { flex: 1; }
+    .app-content .top .badge {
+      background: rgba(138,218,165,0.10);
+      color: var(--green-400);
+      border: 1px solid rgba(138,218,165,0.30);
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+
+    .app-content h2 {
+      font-size: 18px;
+      margin: 0 0 4px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+    }
+    .app-content .sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .a-card {
+      background: rgba(15, 32, 52, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+    }
+    .a-card .label {
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-dim);
+      margin-bottom: 4px;
+    }
+    .a-card .title {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0 0 6px;
+    }
+    .a-card .body {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .a-card .row {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      font-size: 11.5px;
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .a-card .row:last-child { border-bottom: none; }
+    .a-card .row .k { color: var(--text-muted); }
+    .a-card .row .v { color: var(--text-primary); font-weight: 500; }
+    .a-card.alert {
+      border-color: rgba(242,210,139,0.40);
+      background: linear-gradient(135deg, rgba(242,210,139,0.06) 0%, rgba(15, 32, 52, 0.95) 100%);
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .quick {
+      background: rgba(15, 32, 52, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    .quick .ico {
+      width: 28px; height: 28px;
+      background: rgba(125,201,255,0.10);
+      border: 1px solid var(--line-cyan);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cyan-400);
+      margin-bottom: 8px;
+    }
+    .quick .title {
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .quick .sub {
+      font-size: 10px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .btn-primary {
+      width: 100%;
+      background: var(--cyan-500);
+      color: var(--navy-ink);
+      border: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 12.5px;
+      font-family: inherit;
+      cursor: pointer;
+      margin-top: 4px;
+    }
+    .btn-primary.gold { background: var(--gold-500); }
+  </style>
+</head>
+<body>
+<div class="android-frame">
+  <div class="notch"></div>
+  <div class="status">
+    <span>9:41</span>
+    <span>5G &nbsp;·&nbsp; ▾ 87%</span>
+  </div>
+  <div class="content app-content">
+
+    <div class="top">
+      <div class="pyramid"><svg viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg"><polygon points="167.75724,318 352.24276,318 440,470 80,470" transform="matrix(1.222,0,0,1.222,-57.78,-113.39)"/><polygon points="333.1902,285 186.8098,285 260,158.23085" transform="matrix(1.222,0,0,1.222,-57.78,-113.39)"/></svg></div>
+      <span class="title">Pharaoh Field</span>
+      <span class="spacer"></span>
+      <span class="badge">ON DUTY</span>
+    </div>
+
+    <h2>Good morning, Riya</h2>
+    <div class="sub">3 fleet alerts · 1 needs a hand on-site</div>
+
+    <div class="a-card alert">
+      <div class="label" style="color: var(--gold-500);">🛡 ACTION REQUIRED · ON-SITE</div>
+      <h3 class="title">Lab workstation lab-bos-rig-04 won't boot</h3>
+      <div class="body">
+        Endpoint Agent is offline for 27 min. Remote KVM not available. Agent recommends on-site KVM via your phone — you're in the building.
+      </div>
+      <button class="btn-primary gold" style="margin-top:10px;">Use phone as KVM →</button>
+    </div>
+
+    <div class="quick-grid" style="margin-top:14px;">
+      <div class="quick">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="3" y="4" width="18" height="12" rx="1"/><line x1="8" y1="20" x2="16" y2="20"/></svg></div>
+        <div class="title">Fleet</div>
+        <p class="sub">2,847 endpoints<br/>5 alerts</p>
+      </div>
+      <div class="quick">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <div class="title">Tickets</div>
+        <p class="sub">12 open<br/>3 escalated to you</p>
+      </div>
+      <div class="quick">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="title">Approvals</div>
+        <p class="sub">2 pending<br/>1 high-risk</p>
+      </div>
+      <div class="quick">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/></svg></div>
+        <div class="title">Projects</div>
+        <p class="sub">Win11 migration<br/>29.7% complete</p>
+      </div>
+    </div>
+
+    <div class="a-card" style="margin-top: 6px;">
+      <div class="label">RECENT AGENT WORK</div>
+      <div class="row"><span class="k">12:46 · Backend Agent</span><span class="v" style="color:var(--green-400);">MFA reset ✓</span></div>
+      <div class="row"><span class="k">12:31 · Endpoint Agent</span><span class="v" style="color:var(--green-400);">DNS cache cleared</span></div>
+      <div class="row"><span class="k">12:14 · Master Agent</span><span class="v" style="color:var(--cyan-400);">Cohort 3 → 4 ready</span></div>
+      <div class="row"><span class="k">11:58 · Coding Agent</span><span class="v" style="color:var(--gold-500);">PR draft ready</span></div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

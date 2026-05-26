@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Master Agent · Pharaoh</title>
+  <link rel="stylesheet" href="pharaoh-app.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <svg viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg"><polygon points="167.75724,318 352.24276,318 440,470 80,470" transform="matrix(1.222,0,0,1.222,-57.78,-113.39)"/><polygon points="333.1902,285 186.8098,285 260,158.23085" transform="matrix(1.222,0,0,1.222,-57.78,-113.39)"/></svg>
+      PHARAOH
+    </div>
+    <div class="group">Operate</div>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-7h-6v7H4a1 1 0 01-1-1V9.5z"/></svg>Home</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="1"/><line x1="8" y1="20" x2="16" y2="20"/></svg>Endpoints</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg>Backend Agent</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Coding Agent</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>End-User Agent</a>
+    <a class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/></svg>Master Agent</a>
+    <div class="group">Govern</div>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Guardrails</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/></svg>IT Knowledge Base</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Activity &amp; Audit</a>
+    <div class="spacer"></div>
+    <div class="user">
+      <div class="avatar">RP</div>
+      <div>
+        <div class="name">Riya Patel</div>
+        <div class="role">Senior IT Operations</div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="crumbs">MASTER AGENT · PROJECTS · <strong>WIN11-MIGRATION-Q2</strong></div>
+      <div class="spacer"></div>
+      <button class="btn ghost">Pause rollout</button>
+      <button class="btn">Approve next cohort</button>
+    </div>
+
+    <div class="page">
+      <div class="page-title">
+        <h1>Windows 11 24H2 — Fleet-wide migration</h1>
+        <span class="pill cyan">RUNNING</span>
+        <span class="pill green">HEALTH OK</span>
+        <span class="pill gold">COHORT 3 OF 8 · APPROVAL DUE</span>
+      </div>
+      <div class="page-sub">Master Agent · 2,847 endpoints in scope · started 2026-05-12 · est. completion 2026-06-04 · automatic rollback on regression</div>
+
+      <div class="tabs">
+        <a class="active">Rollout</a>
+        <a>Health Signals</a>
+        <a>Cohorts (8)</a>
+        <a>Approvals</a>
+        <a>Rollback Plan</a>
+      </div>
+
+      <div class="grid-3" style="margin-bottom: 20px;">
+        <div class="card">
+          <h3>Progress</h3>
+          <div style="font-size: 28px; font-weight: 700; color: var(--cyan-400); letter-spacing:-0.02em;">847 <span style="font-size:14px; color: var(--text-muted); font-weight:500;">/ 2,847</span></div>
+          <div class="progress mt-1"><div style="width: 29.7%"></div></div>
+          <div style="font-size: 11px; color: var(--text-dim); margin-top:6px;">29.7% complete · 1,983 endpoints queued · 17 failed (0.6%)</div>
+        </div>
+        <div class="card">
+          <h3>Health signal</h3>
+          <div style="font-size: 28px; font-weight: 700; color: var(--green-400); letter-spacing:-0.02em;">Stable</div>
+          <div class="progress mt-1"><div style="width: 92%; background: linear-gradient(90deg, var(--green-400), #3d8c59);"></div></div>
+          <div style="font-size: 11px; color: var(--text-dim); margin-top:6px;">No regression detected · 0 priority alerts in last 4h · ok to advance</div>
+        </div>
+        <div class="card">
+          <h3>Next gate</h3>
+          <div style="font-size: 18px; font-weight: 600; color: var(--text-primary);">Cohort 3 → 4</div>
+          <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">Add 425 endpoints (15%). Requires <span class="accent-gold">human approval</span> per policy <code style="background:var(--navy-deep);padding:1px 4px;border-radius:3px;color:var(--cyan-400);font-family:'JetBrains Mono', monospace;">MIGRATION_GATE_15PCT</code>.</div>
+          <button class="btn gold sm mt-2" style="margin-top:10px;">Review &amp; approve →</button>
+        </div>
+      </div>
+
+      <div class="grid-2-1">
+        <div class="card">
+          <h3>Fleet rollout map · 2,847 endpoints</h3>
+          <div class="cohort-grid mt-2" id="cohort">
+            <!-- populated by inline script -->
+          </div>
+          <div class="row-flex mt-3" style="font-size: 11px; color: var(--text-muted); gap: 14px;">
+            <span class="row-flex"><span class="dot" style="width:10px;height:10px;background:var(--green-400);border-radius:3px;display:inline-block;margin-right:6px;"></span>Upgraded</span>
+            <span class="row-flex"><span class="dot" style="width:10px;height:10px;background:var(--cyan-500);border-radius:3px;display:inline-block;margin-right:6px;box-shadow:0 0 6px var(--cyan-500);"></span>In flight</span>
+            <span class="row-flex"><span class="dot" style="width:10px;height:10px;background:var(--amber-500);border-radius:3px;display:inline-block;margin-right:6px;"></span>Warning</span>
+            <span class="row-flex"><span class="dot" style="width:10px;height:10px;background:var(--red-500);border-radius:3px;display:inline-block;margin-right:6px;"></span>Failed (auto-rollback)</span>
+            <span class="row-flex"><span class="dot" style="width:10px;height:10px;background:var(--navy-deep);border:1px solid var(--line);border-radius:3px;display:inline-block;margin-right:6px;"></span>Queued</span>
+          </div>
+        </div>
+
+        <div class="stack-v">
+          <div class="card">
+            <h3>Cohort schedule</h3>
+            <div style="font-size: 12px;">
+              <div class="row"><span class="k accent-green">✓ Cohort 1 · 14 (canary)</span><span class="v">complete</span></div>
+              <div class="row"><span class="k accent-green">✓ Cohort 2 · 142 (5%)</span><span class="v">complete</span></div>
+              <div class="row"><span class="k accent-cyan">▶ Cohort 3 · 425 (15%)</span><span class="v">in progress</span></div>
+              <div class="row"><span class="k">Cohort 4 · 425 (15%)</span><span class="v">awaiting gate</span></div>
+              <div class="row"><span class="k">Cohort 5 · 425 (15%)</span><span class="v">queued</span></div>
+              <div class="row"><span class="k">Cohort 6 · 569 (20%)</span><span class="v">queued</span></div>
+              <div class="row"><span class="k">Cohort 7 · 569 (20%)</span><span class="v">queued</span></div>
+              <div class="row"><span class="k">Cohort 8 · 278 (10%)</span><span class="v">queued</span></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Auto-rollback triggers</h3>
+            <div class="row-flex mb-1"><span class="pill green">ARMED</span><span style="font-size:11.5px;">Boot success rate &lt; 98%</span></div>
+            <div class="row-flex mb-1"><span class="pill green">ARMED</span><span style="font-size:11.5px;">VPN auth failures &gt; 2%</span></div>
+            <div class="row-flex"><span class="pill green">ARMED</span><span style="font-size:11.5px;">User-reported tickets spike &gt; 5×</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+  // Render 800 endpoint dots with realistic state distribution
+  const total = 800;
+  const grid = document.getElementById('cohort');
+  const states = [];
+  const upgraded = Math.floor(total * 0.297);
+  const inflight = Math.floor(total * 0.04);
+  const warn = 5;
+  const err = 3;
+  for (let i = 0; i < upgraded; i++) states.push('ok');
+  for (let i = 0; i < inflight; i++) states.push('live');
+  for (let i = 0; i < warn; i++) states.push('warn');
+  for (let i = 0; i < err; i++) states.push('err');
+  while (states.length < total) states.push('queued');
+  // Shuffle so it doesn't look blocky
+  for (let i = states.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [states[i], states[j]] = [states[j], states[i]];
+  }
+  // But keep upgraded cluster on left for narrative
+  states.sort((a, b) => {
+    const order = { ok: 0, live: 1, warn: 2, err: 3, queued: 4 };
+    return order[a] - order[b];
+  });
+  // Add a bit of jitter back for realism
+  for (let i = 0; i < states.length - 4; i++) {
+    if (Math.random() < 0.04) {
+      const j = i + 1 + Math.floor(Math.random() * 3);
+      [states[i], states[j]] = [states[j], states[i]];
+    }
+  }
+  states.forEach(s => {
+    const d = document.createElement('div');
+    d.className = 'dot ' + (s === 'queued' ? '' : s);
+    grid.appendChild(d);
+  });
+</script>
+</body>
+</html>

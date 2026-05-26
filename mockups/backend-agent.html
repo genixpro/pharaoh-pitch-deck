@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Backend Agent · Pharaoh</title>
+  <link rel="stylesheet" href="pharaoh-app.css" />
+</head>
+<body>
+<div class="app">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <svg viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg"><polygon points="167.75724,318 352.24276,318 440,470 80,470" transform="matrix(1.222,0,0,1.222,-57.78,-113.39)"/><polygon points="333.1902,285 186.8098,285 260,158.23085" transform="matrix(1.222,0,0,1.222,-57.78,-113.39)"/></svg>
+      PHARAOH
+    </div>
+    <div class="group">Operate</div>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-7h-6v7H4a1 1 0 01-1-1V9.5z"/></svg>Home</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="1"/><line x1="8" y1="20" x2="16" y2="20"/></svg>Endpoints</a>
+    <a class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg>Backend Agent</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Coding Agent</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>End-User Agent</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/></svg>Master Agent</a>
+    <div class="group">Govern</div>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Guardrails</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><line x1="3" y1="9" x2="21" y2="9"/></svg>IT Knowledge Base</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Activity &amp; Audit</a>
+    <div class="spacer"></div>
+    <div class="user">
+      <div class="avatar">RP</div>
+      <div>
+        <div class="name">Riya Patel</div>
+        <div class="role">Senior IT Operations</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="topbar">
+      <div class="crumbs">HOME · BACKEND AGENT · <strong>SESSION-2841</strong></div>
+      <div class="spacer"></div>
+      <button class="btn ghost">Pause</button>
+      <button class="btn">Approve next step</button>
+    </div>
+
+    <div class="page">
+      <div class="page-title">
+        <h1>Reset Okta MFA for j.morgan@acme.com</h1>
+        <span class="pill cyan">RUNNING</span>
+        <span class="pill gold">AWAITING APPROVAL</span>
+      </div>
+      <div class="page-sub">Backend Agent · session opened 12:42 PM · driven by Endpoint ticket #PH-9412 · estimated 3 steps remaining</div>
+
+      <div class="tabs">
+        <a class="active">Live Session</a>
+        <a>Plan</a>
+        <a>Evidence</a>
+        <a>Audit Trail</a>
+      </div>
+
+      <div class="grid-3-1">
+        <div class="stack-v">
+
+          <div class="card">
+            <h3>Live browser session — Okta admin console</h3>
+            <div style="background: var(--navy-ink); border:1px solid var(--line); border-radius:8px; padding:0; margin-top:8px; overflow:hidden;">
+              <!-- Fake browser chrome inside -->
+              <div style="background: var(--navy-night); padding:7px 12px; border-bottom:1px solid var(--line); display:flex; gap:8px; align-items:center; font-family:'JetBrains Mono', monospace; font-size:11px;">
+                <span style="width:8px;height:8px;border-radius:50%;background:var(--red-500)"></span>
+                <span style="width:8px;height:8px;border-radius:50%;background:var(--amber-500)"></span>
+                <span style="width:8px;height:8px;border-radius:50%;background:var(--green-400)"></span>
+                <span style="color: var(--text-muted); margin-left:8px;">acme.okta.com/admin/users/j.morgan/factors</span>
+              </div>
+              <!-- Fake browser content -->
+              <div style="padding: 18px 20px; background: #ffffff; color: #1a1a1a; font-family: 'Inter', sans-serif; font-size: 12px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:12px; border-bottom: 1px solid #eee;">
+                  <strong style="font-size:14px;">J. Morgan · Multifactor settings</strong>
+                  <span style="background:#e8f5e9; color:#2e7d32; padding:2px 8px; border-radius:4px; font-size:10px;">ACTIVE</span>
+                </div>
+                <div style="padding: 12px 0; border-bottom:1px solid #f3f3f3; display:flex; justify-content:space-between;">
+                  <div>
+                    <div style="font-weight:600;">Okta Verify (push)</div>
+                    <div style="font-size:11px; color:#777;">Enrolled · 2025-11-04</div>
+                  </div>
+                  <button style="background: #fbe9e7; color: #c62828; border: 1px solid #ffcdd2; border-radius:4px; padding:4px 12px; font-size:11px; font-weight:600; box-shadow: 0 0 0 2px rgba(255, 117, 109, 0.18); cursor:pointer;">Reset →</button>
+                </div>
+                <div style="padding: 12px 0; display:flex; justify-content:space-between;">
+                  <div>
+                    <div style="font-weight:600;">SMS Authentication</div>
+                    <div style="font-size:11px; color:#777;">Enrolled · 2025-08-21</div>
+                  </div>
+                  <button style="background:#fff; color:#777; border:1px solid #ddd; border-radius:4px; padding:4px 12px; font-size:11px;">Reset</button>
+                </div>
+              </div>
+            </div>
+            <div class="row-flex mt-2" style="font-size: 11px; color: var(--text-dim); font-family: 'JetBrains Mono', monospace;">
+              <span class="pill muted">CURSOR · 412, 318</span>
+              <span class="pill muted">VIEWPORT · 1280×800</span>
+              <span class="pill muted">LATENCY · 84ms</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Agent reasoning</h3>
+            <div class="chat mt-2">
+              <div class="msg agent">
+                <div class="av">BA</div>
+                <div class="body">
+                  <div class="meta">BACKEND AGENT · STEP 3 OF 5 · 12:46:18</div>
+                  Located the Okta Verify factor for j.morgan. The Endpoint Agent confirmed the user's phone was replaced this morning — old factor is no longer reachable. Plan: click "Reset" on the Okta Verify factor, then re-enroll via email-link recovery.
+                  <div class="row-flex mt-2">
+                    <span class="pill gold">SENSITIVE ACTION</span>
+                    <span class="pill muted">POLICY · MFA_RESET_REQUIRES_APPROVAL</span>
+                  </div>
+                </div>
+              </div>
+              <div class="msg system">
+                <div class="av">⏵</div>
+                <div class="body">
+                  Approval requested from <strong>Riya Patel</strong> · <em class="pill gold" style="padding:2px 6px;font-size:9px;">PENDING 0:42</em>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right rail -->
+        <div class="stack-v">
+          <div class="card">
+            <h3>Originating ticket</h3>
+            <div class="row"><span class="k">Ticket</span><span class="v">PH-9412</span></div>
+            <div class="row"><span class="k">User</span><span class="v">j.morgan@acme.com</span></div>
+            <div class="row"><span class="k">Endpoint</span><span class="v">acme-bos-mac-077</span></div>
+            <div class="row"><span class="k">Symptom</span><span class="v">MFA locked out</span></div>
+            <div class="row"><span class="k">Triaged by</span><span class="v">End-User Agent</span></div>
+          </div>
+          <div class="card">
+            <h3>Authorized scope</h3>
+            <div style="font-size: 11.5px; color: var(--text-secondary); line-height:1.55;">
+              <div class="row-flex mb-1"><span class="pill green">ALLOWED</span> Reset MFA factor</div>
+              <div class="row-flex mb-1"><span class="pill green">ALLOWED</span> Send recovery email</div>
+              <div class="row-flex mb-1"><span class="pill amber">APPROVAL</span> Disable account</div>
+              <div class="row-flex"><span class="pill red">BLOCKED</span> Modify group membership</div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Plan</h3>
+            <ol style="margin:0;padding-left:20px;font-size:12px;line-height:1.7;color:var(--text-secondary);">
+              <li style="color:var(--green-400);">Open Okta admin console ✓</li>
+              <li style="color:var(--green-400);">Locate user j.morgan ✓</li>
+              <li style="color:var(--cyan-400);"><strong>Reset Okta Verify factor</strong></li>
+              <li>Send recovery email</li>
+              <li>Verify factor re-enrollment</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
