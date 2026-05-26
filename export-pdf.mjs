@@ -145,7 +145,7 @@ const imgTags = pngPaths
   .map((p) => `<img src="file://${p}">`)
   .join("\n");
 
-const stitchHtml = path.join(TMPDIR, "WELL IT Autonomous AI Transformation");
+const stitchHtml = path.join(TMPDIR, "WELL IT Autonomous AI Transformation.html");
 fs.writeFileSync(
   stitchHtml,
   `<!DOCTYPE html><html><head><style>
