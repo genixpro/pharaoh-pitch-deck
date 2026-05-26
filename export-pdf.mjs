@@ -17,7 +17,7 @@ const TMPDIR = fs.mkdtempSync(path.join(os.tmpdir(), "pharaoh-pdf-"));
 // Slide dimensions from Reveal config
 const SLIDE_W = 1600;
 const SLIDE_H = 1000;
-const SCALE   = 4; // 4× for high-DPI export
+const SCALE   = 1;
 
 // ── Start an ephemeral static file server rooted in __dirname ────────────────
 const MIME = {
